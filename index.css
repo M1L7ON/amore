@@ -1,0 +1,3124 @@
+/* Preparar la página sin mostrar un fondo incorrecto */
+html.tema-preparando body {
+    opacity: 0;
+}
+
+/* Mostrar el contenido suavemente cuando esté listo */
+html body {
+    opacity: 1;
+}
+
+html.tema-preparando body {
+    transition: none !important;
+}
+/* =========================
+   CONFIGURACIÓN GENERAL
+========================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: Arial, Helvetica, sans-serif;
+        background: linear-gradient(
+        90deg,
+        #f1c1ca,
+        #f3909b
+    );
+    color: #2b161b;
+    transition: 0.3s;
+}
+/* =========================
+   HEADER
+========================= */
+header {
+    width: 100%;
+    min-height: 90px;
+    background: linear-gradient(
+        90deg,
+        #641326,
+        #a51d35
+    );
+    display: flex;
+    align-items: center;
+    padding: 12px 5%;
+    gap: 20px;
+    color: white;
+
+    position: relative;
+    z-index: 10;
+}
+/* LOGO */
+.logo {
+    width: 65px;
+    height: 65px;
+    min-width: 65px;
+    min-height: 65px;
+    flex-shrink: 0;
+    background-color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    border: 3px solid white;
+}
+.logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+/* NOMBRE AMORE */
+.nombre-tienda {
+    font-family: Georgia, serif;
+    font-size: 50px;
+    font-weight: bold;
+    letter-spacing: 6px;
+    text-shadow: 2px 2px 5px #3b0b17;
+}
+/* =========================
+   MENÚ
+========================= */
+nav {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    flex-wrap: wrap;
+}
+nav a,
+#modoOscuro {
+    color: white;
+    text-decoration: none;
+    background: transparent;
+    border: none;
+    padding: 10px 13px;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 14px;
+    transition: 0.3s;
+}
+nav a:hover,
+#modoOscuro:hover {
+    background-color: rgba(255,255,255,0.2);
+}
+
+/* ==========================================
+   INICIO AMORE - DISEÑO PRINCIPAL
+========================================== */
+
+.inicio-amore {
+    --ini-guindo: #a51d35;
+    --ini-guindo-oscuro: #641326;
+    --ini-rosa: #e9a1b2;
+    --ini-dorado: #d5ad6b;
+    --ini-texto: #4b202b;
+    --ini-suave: #795b63;
+    --ini-caja: rgba(255, 250, 250, 0.96);
+    --ini-rosa-claro: #fbe8ed;
+
+    width: min(1240px, 92%);
+    margin: 0 auto;
+    padding: 34px 0 55px;
+    color: var(--ini-texto);
+}
+
+.inicio-amore *,
+.inicio-amore *::before,
+.inicio-amore *::after {
+    box-sizing: border-box;
+}
+
+.inicio-amore img {
+    display: block;
+    max-width: 100%;
+}
+
+.inicio-amore h1,
+.inicio-amore h2,
+.inicio-amore h3,
+.inicio-amore p {
+    margin-top: 0;
+}
+
+.inicio-amore p {
+    line-height: 1.8;
+}
+
+.inicio-amore a {
+    text-decoration: none;
+}
+
+.inicio-amore button {
+    font-family: inherit;
+}
+
+/* ==========================================
+   CAJA PRINCIPAL: IMAGEN + DESCRIPCIÓN
+========================================== */
+
+.inicio-presentacion {
+    position: relative;
+    display: grid;
+    grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.05fr);
+    align-items: center;
+    gap: clamp(24px, 4vw, 50px);
+
+    padding: clamp(22px, 4vw, 44px);
+    margin-bottom: 40px;
+    border: 2px solid transparent;
+    border-radius: 26px;
+
+    background:
+        linear-gradient(var(--ini-caja), var(--ini-caja)) padding-box,
+        linear-gradient(
+            125deg,
+            var(--ini-guindo),
+            var(--ini-rosa),
+            var(--ini-dorado),
+            var(--ini-guindo)
+        ) border-box;
+
+    background-size: 100% 100%, 250% 250%;
+    animation: inicioBordeDegradado 8s ease infinite;
+
+    box-shadow: 0 16px 42px rgba(100, 19, 38, 0.13);
+}
+
+.inicio-imagen-marco {
+    position: relative;
+    min-width: 0;
+    padding: 9px;
+    border: 2px solid transparent;
+    border-radius: 23px;
+
+    background:
+        linear-gradient(#fff8fa, #fff8fa) padding-box,
+        linear-gradient(
+            145deg,
+            var(--ini-dorado),
+            var(--ini-guindo),
+            var(--ini-rosa)
+        ) border-box;
+
+    box-shadow: 0 10px 27px rgba(100, 19, 38, 0.15);
+    transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.inicio-imagen-marco:hover {
+    transform: translateY(-5px) rotate(-0.5deg);
+    box-shadow: 0 17px 35px rgba(100, 19, 38, 0.2);
+}
+
+.inicio-imagen-tienda {
+    width: 100%;
+    height: clamp(300px, 34vw, 440px);
+    border-radius: 15px;
+    object-fit: cover;
+    background: #f4dce3;
+}
+
+.inicio-etiqueta-imagen {
+    position: absolute;
+    top: 22px;
+    left: 22px;
+    z-index: 2;
+
+    padding: 10px 14px;
+    border: 1px solid rgba(255, 255, 255, 0.75);
+    border-radius: 30px;
+
+    background: rgba(100, 19, 38, 0.91);
+    color: white;
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 1.3px;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.15);
+}
+
+.inicio-sello-imagen {
+    position: absolute;
+    right: -13px;
+    bottom: 25px;
+    z-index: 2;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    width: 105px;
+    height: 105px;
+    border: 3px double var(--ini-dorado);
+    border-radius: 50%;
+
+    background: linear-gradient(145deg, #fffaf7, #f8e0e7);
+    color: var(--ini-guindo-oscuro);
+    text-align: center;
+    box-shadow: 0 7px 20px rgba(100, 19, 38, 0.2);
+    transform: rotate(7deg);
+}
+
+.inicio-sello-imagen span {
+    font-family: Georgia, serif;
+    font-size: 21px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.inicio-sello-imagen small {
+    margin-top: 4px;
+    font-size: 9px;
+}
+
+.inicio-descripcion {
+    min-width: 0;
+    animation: inicioEntrada 0.75s ease both;
+}
+
+.inicio-mini-titulo {
+    display: inline-block;
+    margin-bottom: 13px;
+    color: var(--ini-guindo);
+    font-size: 10px;
+    font-weight: 900;
+    letter-spacing: 1.9px;
+    line-height: 1.6;
+}
+
+.inicio-descripcion h1 {
+    margin-bottom: 0;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(30px, 3.5vw, 47px);
+    line-height: 1.18;
+    letter-spacing: -0.8px;
+}
+
+.inicio-descripcion h1 span {
+    display: inline-block;
+    background: linear-gradient(
+        100deg,
+        var(--ini-guindo),
+        #d65f7d,
+        #bd8b43
+    );
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+.inicio-linea-decorativa {
+    width: 100px;
+    height: 4px;
+    margin: 20px 0;
+    border-radius: 10px;
+    background: linear-gradient(
+        90deg,
+        var(--ini-guindo),
+        var(--ini-rosa),
+        var(--ini-dorado)
+    );
+}
+
+.inicio-descripcion > p {
+    margin-bottom: 25px;
+    color: var(--ini-suave);
+    font-size: 20px;
+    text-align: left;
+}
+
+/* ==========================================
+   BOTONES
+========================================== */
+
+.inicio-boton {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+
+    min-height: 46px;
+    padding: 12px 19px;
+
+    border: 2px solid var(--ini-guindo);
+    border-radius: 12px;
+
+    background: linear-gradient(
+        110deg,
+        var(--ini-guindo-oscuro),
+        var(--ini-guindo)
+    );
+
+    color: #ffffff !important;
+    font-size: 20px;
+    font-weight: 800;
+    text-align: center;
+
+    box-shadow: 0 6px 15px rgba(100, 19, 38, 0.16);
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease,
+        background 0.25s ease;
+}
+
+.inicio-boton:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 23px rgba(100, 19, 38, 0.25);
+    background: linear-gradient(
+        110deg,
+        #a51d35,
+        #c94f6d
+    );
+}
+
+.inicio-boton span {
+    font-size: 18px;
+    transition: transform 0.25s ease;
+}
+
+.inicio-boton:hover span {
+    transform: translate(3px, -2px);
+}
+
+/* ==========================================
+   MENSAJE DE BIENVENIDA
+========================================== */
+
+.inicio-bienvenida {
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+
+    margin: 42px 0 25px;
+    padding: clamp(35px, 6vw, 66px) clamp(22px, 7vw, 90px);
+
+    border: 2px solid transparent;
+    border-radius: 24px;
+
+    background:
+        linear-gradient(135deg, #fff9fa, #f9e5eb) padding-box,
+        linear-gradient(
+            110deg,
+            var(--ini-dorado),
+            var(--ini-guindo),
+            var(--ini-rosa),
+            var(--ini-dorado)
+        ) border-box;
+
+    background-size: 100% 100%, 250% 250%;
+    animation: inicioBordeDegradado 9s ease infinite;
+
+    box-shadow: 0 13px 35px rgba(100, 19, 38, 0.12);
+    text-align: center;
+}
+
+.inicio-bienvenida::before,
+.inicio-bienvenida::after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    width: 180px;
+    height: 180px;
+    border: 1px solid rgba(165, 29, 53, 0.17);
+    border-radius: 50%;
+    pointer-events: none;
+}
+
+.inicio-bienvenida::before {
+    top: -105px;
+    left: -65px;
+    box-shadow:
+        0 0 0 15px rgba(165, 29, 53, 0.035),
+        0 0 0 30px rgba(165, 29, 53, 0.025);
+}
+
+.inicio-bienvenida::after {
+    right: -70px;
+    bottom: -115px;
+    box-shadow:
+        0 0 0 15px rgba(165, 29, 53, 0.035),
+        0 0 0 30px rgba(165, 29, 53, 0.025);
+}
+
+.inicio-bienvenida h2 {
+    max-width: 760px;
+    margin: 0 auto 18px;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(26px, 3.8vw, 40px);
+    line-height: 1.3;
+    color: var(--ini-guindo-oscuro);
+}
+
+.inicio-bienvenida > p {
+    max-width: 700px;
+    margin: 0 auto;
+    color: var(--ini-suave);
+    font-size: 20px;
+}
+
+.bienvenida-firma {
+    margin-top: 25px;
+    color: rgb(204, 38, 74);
+    font-family: Georgia, serif;
+    font-size: 17px;
+    font-style: italic;
+}
+
+.bienvenida-firma span {
+    display: inline-block;
+    margin-left: 5px;
+    font-size: 23px;
+}
+
+.bienvenida-adorno {
+    position: absolute;
+    color: rgba(165, 29, 53, 0.22);
+    pointer-events: none;
+}
+
+.bienvenida-adorno-uno {
+    top: 22px;
+    right: 8%;
+    font-size: 34px;
+    animation: inicioFlotar 4s ease-in-out infinite;
+}
+
+.bienvenida-adorno-dos {
+    bottom: 25px;
+    left: 7%;
+    font-size: 36px;
+    animation: inicioFlotar 5s ease-in-out infinite reverse;
+}
+
+/* ==========================================
+   TÍTULO DEL CARRUSEL
+========================================== */
+
+.inicio-seccion-carrusel {
+    margin: 0 0 15px;
+}
+
+.inicio-titulo-seccion {
+    margin: 0 auto 28px;
+    text-align: center;
+}
+
+.inicio-titulo-seccion h2 {
+    margin-bottom: 10px;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(28px, 4vw, 40px);
+    color: var(--ini-guindo-oscuro);
+}
+
+.inicio-titulo-seccion > p {
+    margin-bottom: 0;
+    color: var(--ini-suave);
+    font-size: 20px;
+}
+
+/* ==========================================
+   CARRUSEL: MARCO EXTERIOR
+========================================== */
+
+.inicio-carrusel {
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+
+    min-width: 0;
+    border: 3px solid transparent;
+    border-radius: 24px;
+
+    background:
+        linear-gradient(var(--ini-caja), var(--ini-caja)) padding-box,
+        linear-gradient(
+            130deg,
+            var(--ini-guindo),
+            var(--ini-dorado),
+            var(--ini-rosa),
+            var(--ini-guindo)
+        ) border-box;
+
+    background-size: 100% 100%, 250% 250%;
+    animation: inicioBordeDegradado 8s ease infinite;
+
+    box-shadow: 0 15px 40px rgba(100, 19, 38, 0.16);
+}
+
+.inicio-diapositiva {
+    display: none;
+    grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
+    align-items: stretch;
+    min-height: 390px;
+}
+
+.inicio-diapositiva.activa {
+    display: grid;
+    animation: diapositivaEntrada 0.65s ease both;
+}
+
+.diapositiva-imagen {
+    min-width: 0;
+    min-height: 390px;
+    overflow: hidden;
+    background: #f4dce3;
+}
+
+.diapositiva-imagen img {
+    width: 100%;
+    height: 100%;
+    min-height: 390px;
+    object-fit: cover;
+    transition: transform 0.7s ease;
+}
+
+.inicio-diapositiva.activa .diapositiva-imagen img {
+    animation: imagenCarruselEntrada 0.8s ease both;
+}
+
+.diapositiva-imagen:hover img {
+    transform: scale(1.045);
+}
+
+.diapositiva-contenido {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    min-width: 0;
+    padding: clamp(25px, 4vw, 52px);
+    background: var(--ini-caja);
+}
+
+.diapositiva-numero {
+    display: inline-block;
+    margin-bottom: 25px;
+    padding-bottom: 9px;
+    border-bottom: 2px solid var(--ini-rosa);
+    color: var(--ini-guindo);
+    font-size: 15px;
+    font-weight: 900;
+    letter-spacing: 2px;
+}
+
+.diapositiva-contenido h3 {
+    margin-bottom: 16px;
+    color: var(--ini-guindo-oscuro);
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(30px, 3.5vw, 43px);
+}
+
+.diapositiva-contenido > p {
+    margin-bottom: 25px;
+    color: var(--ini-suave);
+    font-size: 20px;
+}
+
+.diapositiva-contenido .inicio-boton {
+    margin-top: 3px;
+}
+
+/* ==========================================
+   FLECHAS DEL CARRUSEL
+========================================== */
+
+.carrusel-flecha {
+    position: absolute;
+    top: 50%;
+    z-index: 4;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 43px;
+    height: 43px;
+    padding: 0;
+
+    border: 2px solid var(--ini-rosa);
+    border-radius: 50%;
+    background: rgba(100, 19, 38, 0.92);
+
+    color: white;
+    font-size: 30px;
+    line-height: 1;
+    cursor: pointer;
+
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.16);
+    transform: translateY(-50%);
+    transition: background 0.25s ease, transform 0.25s ease;
+}
+
+.carrusel-flecha:hover {
+    background: var(--ini-guindo);
+    transform: translateY(-50%) scale(1.08);
+}
+
+.carrusel-anterior {
+    left: 13px;
+}
+
+.carrusel-siguiente {
+    right: 13px;
+}
+
+/* ==========================================
+   PUNTOS Y BOTÓN DE PAUSA
+========================================== */
+
+.carrusel-pie {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.carrusel-puntos {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.carrusel-punto {
+    width: 10px;
+    height: 10px;
+    padding: 0;
+    border: 1px solid var(--ini-guindo);
+    border-radius: 20px;
+    background: transparent;
+    cursor: pointer;
+    transition: width 0.3s ease, background 0.3s ease;
+}
+
+.carrusel-punto.activo {
+    width: 31px;
+    background: linear-gradient(
+        90deg,
+        var(--ini-guindo),
+        var(--ini-rosa)
+    );
+}
+
+.carrusel-pausa {
+    padding: 8px 13px;
+    border: 1px solid var(--ini-guindo);
+    border-radius: 20px;
+    background: var(--ini-caja);
+    color: var(--ini-guindo);
+    font-size: 15px;
+    font-weight: 800;
+    cursor: pointer;
+    transition: background 0.25s ease, color 0.25s ease;
+}
+
+.carrusel-pausa:hover {
+    background: var(--ini-guindo);
+    color: #ffffff;
+}
+
+/* ==========================================
+   BANNER FINAL
+========================================== */
+
+.inicio-banner-final {
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+
+    display: grid;
+    grid-template-columns: auto minmax(0, 1fr) auto;
+    align-items: center;
+    gap: 25px;
+
+    padding: clamp(25px, 4vw, 42px);
+    border: 2px solid transparent;
+    border-radius: 23px;
+
+    background:
+        linear-gradient(120deg, #fff7f9, #f8e1e8) padding-box,
+        linear-gradient(
+            115deg,
+            var(--ini-guindo),
+            var(--ini-rosa),
+            var(--ini-dorado),
+            var(--ini-guindo)
+        ) border-box;
+
+    background-size: 100% 100%, 250% 250%;
+    animation: inicioBordeDegradado 9s ease infinite;
+
+    box-shadow: 0 14px 32px rgba(100, 19, 38, 0.13);
+}
+
+.banner-icono {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+
+    width: 76px;
+    height: 76px;
+    border: 2px solid var(--ini-dorado);
+    border-radius: 22px;
+
+    background: linear-gradient(145deg, #fff, #f6dce4);
+    color: var(--ini-guindo);
+    font-size: 42px;
+    box-shadow: 0 7px 17px rgba(100, 19, 38, 0.13);
+    transform: rotate(-5deg);
+}
+
+.banner-texto {
+    min-width: 0;
+}
+
+.banner-texto h2 {
+    margin-bottom: 10px;
+    color: var(--ini-guindo-oscuro);
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(22px, 2.7vw, 31px);
+    line-height: 1.3;
+}
+
+.banner-texto p {
+    margin-bottom: 0;
+    color: var(--ini-suave);
+    font-size: 20px;
+}
+
+.banner-boton {
+    white-space: nowrap;
+}
+
+.banner-destello {
+    position: absolute;
+    z-index: -1;
+    color: rgba(165, 29, 53, 0.15);
+    pointer-events: none;
+}
+
+.banner-destello-uno {
+    top: 5px;
+    right: 18%;
+    font-size: 35px;
+}
+
+.banner-destello-dos {
+    bottom: 0;
+    right: 5%;
+    font-size: 50px;
+}
+
+/* ==========================================
+   ANIMACIONES
+========================================== */
+
+@keyframes inicioBordeDegradado {
+    0% {
+        background-position: 0% 50%, 0% 50%;
+    }
+
+    50% {
+        background-position: 0% 50%, 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%, 0% 50%;
+    }
+}
+
+@keyframes inicioEntrada {
+    from {
+        opacity: 0;
+        transform: translateY(18px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes diapositivaEntrada {
+    from {
+        opacity: 0.25;
+        transform: translateY(8px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes imagenCarruselEntrada {
+    from {
+        transform: scale(1.04);
+    }
+
+    to {
+        transform: scale(1);
+    }
+}
+
+@keyframes inicioFlotar {
+    0%, 100% {
+        transform: translateY(0) rotate(0deg);
+    }
+
+    50% {
+        transform: translateY(-9px) rotate(7deg);
+    }
+}
+
+/* ==========================================
+   MODO OSCURO
+========================================== */
+
+body.modo-oscuro .inicio-amore {
+    --ini-texto: #f8eaf0;
+    --ini-suave: #d4bdc5;
+    --ini-caja: rgba(40, 27, 32, 0.97);
+    --ini-rosa-claro: #38232b;
+}
+
+body.modo-oscuro .inicio-presentacion {
+    background:
+        linear-gradient(#21171b, #21171b) padding-box,
+        linear-gradient(
+            125deg,
+            #b91c37,
+            #ec6477,
+            #b91c37,
+            #e44f62
+        ) border-box;
+}
+
+body.modo-oscuro .inicio-imagen-marco {
+    background:
+        linear-gradient(#29191e, #29191e) padding-box,
+        linear-gradient(
+            145deg,
+            #b91c37,
+            #ec6477,
+            #b91c37,
+            #e44f62
+        ) border-box;
+}
+
+body.modo-oscuro .inicio-descripcion h1,
+body.modo-oscuro .inicio-titulo-seccion h2,
+body.modo-oscuro .diapositiva-contenido h3 {
+    color: #f6a8b9;
+}
+
+body.modo-oscuro .inicio-descripcion h1 span {
+    background: linear-gradient(
+        100deg,
+        #b91c37,
+            #ec6477,
+            #b91c37,
+            #e44f62
+    );
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+body.modo-oscuro .inicio-mini-titulo,
+body.modo-oscuro .diapositiva-numero {
+    color: #f6a8b9;
+}
+
+body.modo-oscuro .inicio-bienvenida {
+    background:
+        linear-gradient(135deg, #291b20, #38232b) padding-box,
+        linear-gradient(
+            110deg,
+            #b91c37,
+            #ec6477,
+            #b91c37,
+            #e44f62
+        ) border-box;
+}
+
+body.modo-oscuro .inicio-bienvenida h2,
+body.modo-oscuro .banner-texto h2 {
+    color: #f6a8b9;
+}
+
+body.modo-oscuro .inicio-bienvenida > p,
+body.modo-oscuro .inicio-titulo-seccion > p,
+body.modo-oscuro .diapositiva-contenido > p,
+body.modo-oscuro .banner-texto p {
+    color: #d4bdc5;
+}
+
+body.modo-oscuro .inicio-carrusel {
+    background:
+        linear-gradient(#21171b, #21171b) padding-box,
+        linear-gradient(
+            130deg,
+            #b91c37,
+            #ec6477,
+            #b91c37,
+            #e44f62
+        ) border-box;
+}
+
+body.modo-oscuro .diapositiva-contenido {
+    background: #281b20;
+}
+
+body.modo-oscuro .carrusel-punto {
+    border-color: #f08aa1;
+}
+
+body.modo-oscuro .carrusel-punto.activo {
+    background: linear-gradient(90deg, #f08aa1, #b99459);
+}
+
+body.modo-oscuro .carrusel-pausa {
+    border-color: #784052;
+    background: #281b20;
+    color: #f6a8b9;
+}
+
+body.modo-oscuro .carrusel-pausa:hover {
+    background: #f08aa1;
+    color: #281b20;
+}
+
+body.modo-oscuro .inicio-banner-final {
+    background:
+        linear-gradient(120deg, #291b20, #38232b) padding-box,
+        linear-gradient(
+            115deg,
+            #b91c37,
+            #ec6477,
+            #b91c37,
+            #e44f62
+        ) border-box;
+}
+
+body.modo-oscuro .banner-icono {
+    border-color: #cf283f;
+    background: linear-gradient(145deg, #38232b, #291b20);
+    color: #f6a8b9;
+}
+
+body.modo-oscuro .bienvenida-adorno,
+body.modo-oscuro .banner-destello {
+    color: rgba(240, 138, 161, 0.19);
+}
+
+/* ==========================================
+   TABLETS
+========================================== */
+
+@media (max-width: 900px) {
+    .inicio-presentacion {
+        gap: 28px;
+    }
+
+    .inicio-imagen-tienda {
+        height: 360px;
+    }
+
+    .inicio-descripcion > p {
+        font-size: 12px;
+    }
+
+    .inicio-diapositiva {
+        min-height: 340px;
+    }
+
+    .diapositiva-imagen,
+    .diapositiva-imagen img {
+        min-height: 340px;
+    }
+
+    .diapositiva-contenido {
+        padding: 28px;
+    }
+
+    .inicio-banner-final {
+        grid-template-columns: auto minmax(0, 1fr);
+    }
+
+    .banner-boton {
+        grid-column: 2;
+        justify-self: start;
+    }
+}
+
+/* ==========================================
+   CELULARES
+========================================== */
+
+@media (max-width: 650px) {
+    .inicio-amore {
+        width: 92%;
+        padding-top: 20px;
+        padding-bottom: 35px;
+    }
+
+    .inicio-presentacion {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 28px;
+        padding: 17px;
+        margin-bottom: 30px;
+        border-radius: 20px;
+    }
+
+    .inicio-imagen-tienda {
+        height: 280px;
+    }
+
+    .inicio-sello-imagen {
+        right: -5px;
+        bottom: 18px;
+        width: 85px;
+        height: 85px;
+    }
+
+    .inicio-sello-imagen span {
+        font-size: 18px;
+    }
+
+    .inicio-sello-imagen small {
+        font-size: 8px;
+    }
+
+    .inicio-etiqueta-imagen {
+        top: 18px;
+        left: 18px;
+        padding: 8px 11px;
+        font-size: 9px;
+    }
+
+    .inicio-descripcion h1 {
+        font-size: 34px;
+    }
+
+    .inicio-descripcion > p {
+        font-size: 13px;
+    }
+
+    .inicio-boton {
+        min-height: 44px;
+        padding: 11px 15px;
+        font-size: 11px;
+    }
+
+    .inicio-bienvenida {
+        margin: 30px 0 45px;
+        padding: 36px 20px;
+        border-radius: 19px;
+    }
+
+    .inicio-bienvenida h2 {
+        font-size: 28px;
+    }
+
+    .inicio-bienvenida > p {
+        font-size: 13px;
+    }
+
+    .inicio-seccion-carrusel {
+        margin-bottom: 45px;
+    }
+
+    .inicio-titulo-seccion h2 {
+        font-size: 30px;
+    }
+
+    .inicio-diapositiva.activa {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .inicio-diapositiva {
+        min-height: 0;
+    }
+
+    .diapositiva-imagen,
+    .diapositiva-imagen img {
+        min-height: 0;
+        height: 260px;
+    }
+
+    .diapositiva-contenido {
+        padding: 25px 22px 28px;
+    }
+
+    .diapositiva-numero {
+        margin-bottom: 16px;
+    }
+
+    .diapositiva-contenido h3 {
+        font-size: 31px;
+    }
+
+    .diapositiva-contenido > p {
+        font-size: 13px;
+    }
+
+    .carrusel-flecha {
+        top: 130px;
+        width: 37px;
+        height: 37px;
+        font-size: 27px;
+    }
+
+    .carrusel-anterior {
+        left: 10px;
+    }
+
+    .carrusel-siguiente {
+        right: 10px;
+    }
+
+    .carrusel-pie {
+        gap: 15px;
+        margin-top: 16px;
+    }
+
+    .inicio-banner-final {
+        grid-template-columns: minmax(0, 1fr);
+        justify-items: center;
+        gap: 18px;
+        padding: 28px 20px;
+        text-align: center;
+    }
+
+    .banner-icono {
+        width: 62px;
+        height: 62px;
+        border-radius: 18px;
+        font-size: 35px;
+    }
+
+    .banner-texto h2 {
+        font-size: 26px;
+    }
+
+    .banner-boton {
+        grid-column: auto;
+        justify-self: center;
+        white-space: normal;
+    }
+}
+
+/* ==========================================
+   PANTALLAS MUY PEQUEÑAS
+========================================== */
+
+@media (max-width: 360px) {
+    .inicio-descripcion h1 {
+        font-size: 30px;
+    }
+
+    .inicio-imagen-tienda {
+        height: 225px;
+    }
+
+    .inicio-presentacion {
+        padding: 12px;
+    }
+
+    .diapositiva-imagen,
+    .diapositiva-imagen img {
+        height: 220px;
+    }
+
+    .diapositiva-contenido {
+        padding: 21px 16px;
+    }
+
+    .carrusel-flecha {
+        top: 110px;
+    }
+
+    .inicio-bienvenida h2 {
+        font-size: 25px;
+    }
+}
+
+/* ==========================================
+   ACCESIBILIDAD: MENOS MOVIMIENTO
+========================================== */
+
+@media (prefers-reduced-motion: reduce) {
+    .inicio-amore *,
+    .inicio-amore *::before,
+    .inicio-amore *::after {
+        animation: none !important;
+        transition: none !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+
+/* =========================
+   FOOTER AMORE
+========================= */
+
+/* =========================
+   FOOTER AMORE
+========================= */
+
+.footer-amore {
+    position: relative;
+    width: 100%;
+    margin-top: 60px;
+    overflow: hidden;
+    box-sizing: border-box;
+    color: #fff5f8;
+    background: linear-gradient(
+        125deg,
+        #4b0c1c,
+        #79162f,
+        #a51d35,
+        #641326
+    );
+    background-size: 250% 250%;
+    animation: footerFondoAmore 12s ease infinite;
+    border-top: 3px solid #f2a2ba;
+    box-shadow: 0 -8px 30px rgba(100, 19, 38, 0.12);
+}
+
+@keyframes footerFondoAmore {
+    0%, 100% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+}
+
+.footer-contenido {
+    width: 100%;
+    max-width: 1450px;
+    margin: 0 auto;
+    padding: 48px 5%;
+    box-sizing: border-box;
+
+    display: grid;
+    grid-template-columns: 1.35fr 1.1fr 1fr 1fr;
+    gap: 36px;
+    align-items: start;
+}
+
+.footer-columna {
+    min-width: 0;
+}
+
+.footer-columna h3 {
+    margin: 0 0 18px;
+    color: #ffc7d8;
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: 0.4px;
+}
+
+.footer-columna p {
+    margin: 10px 0;
+    font-size: 14px;
+    line-height: 1.8;
+    color: #ffeaf0;
+}
+
+/* LOGO */
+
+.footer-logo {
+    margin: 0;
+    color: #fff;
+    font-size: 34px;
+    font-weight: 800;
+    letter-spacing: 5px;
+    text-shadow:
+        0 0 8px rgba(255, 190, 215, 0.6),
+        0 0 22px rgba(255, 120, 165, 0.25);
+}
+
+.footer-subtitulo {
+    display: block;
+    margin: 6px 0 17px;
+    color: #ffc0d3;
+    font-size: 12px;
+    letter-spacing: 1px;
+}
+
+/* ENLACES DE TEXTO */
+
+.footer-enlace-texto {
+    display: inline-block;
+    margin-top: 9px;
+    color: #ffd1df;
+    font-size: 13px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: color 0.25s ease, transform 0.25s ease;
+}
+
+.footer-enlace-texto:hover {
+    color: #fff;
+    transform: translateX(4px);
+}
+
+/* REDES SOCIALES: ICONOS NEÓN */
+
+.footer-redes .footer-enlaces {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 22px;
+}
+
+.footer-enlaces a {
+    position: relative;
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+
+    color: #ffd6e2;
+    font-size: 23px;
+    text-decoration: none;
+
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 190, 210, 0.65);
+    border-radius: 14px;
+
+    box-shadow: 0 0 8px rgba(233, 161, 178, 0.12);
+
+    transition:
+        transform 0.3s ease,
+        color 0.3s ease,
+        background 0.3s ease,
+        box-shadow 0.3s ease,
+        border-color 0.3s ease;
+}
+
+.footer-enlaces a:hover {
+    transform: translateY(-7px) scale(1.08);
+    color: #fff;
+    background: #a51d35;
+    border-color: #ffb5ce;
+
+    box-shadow:
+        0 0 6px #ffb5ce,
+        0 0 14px rgba(255, 100, 155, 0.85),
+        0 0 28px rgba(233, 161, 178, 0.65),
+        0 8px 20px rgba(0, 0, 0, 0.25);
+}
+
+.footer-enlaces a:hover i {
+    filter: drop-shadow(0 0 5px #fff);
+}
+
+/* HORARIO */
+
+.footer-horario-linea {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    margin-top: 6px;
+}
+
+.footer-horario-linea > i,
+.footer-ubicacion-linea > i {
+    flex-shrink: 0;
+    margin-top: 4px;
+    color: #ffb7ce;
+    font-size: 19px;
+}
+
+.footer-horario-linea strong {
+    color: #fff;
+    font-size: 14px;
+}
+
+.footer-horario-linea p {
+    margin-top: 5px;
+}
+
+.footer-columna .footer-nota {
+    margin-top: 18px;
+    color: #f7c9d7;
+    font-size: 12px;
+}
+
+/* UBICACIÓN */
+
+.footer-ubicacion-linea {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+}
+
+.footer-ubicacion-linea p {
+    margin-top: 0;
+}
+
+.footer-titulo-explorar {
+    margin-top: 27px !important;
+    margin-bottom: 12px !important;
+}
+
+/* NAVEGACIÓN */
+
+.footer-navegacion {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.footer-navegacion a {
+    color: #ffeaf0;
+    font-size: 14px;
+    text-decoration: none;
+    transition: color 0.25s ease, transform 0.25s ease;
+}
+
+.footer-navegacion a:hover {
+    color: #ffb7ce;
+    transform: translateX(5px);
+}
+
+/* FRASE DECORATIVA */
+
+.footer-frase {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    padding: 17px 20px;
+    border-top: 1px solid rgba(255, 225, 235, 0.18);
+    text-align: center;
+}
+
+.footer-frase p {
+    margin: 0;
+    color: #ffe4ec;
+    font-size: 13px;
+    font-style: italic;
+}
+
+.footer-corazon {
+    color: #ffb7ce;
+    font-size: 22px;
+    animation: footerLatido 2s ease-in-out infinite;
+}
+
+@keyframes footerLatido {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.18); }
+}
+
+/* DERECHOS RESERVADOS */
+
+.footer-inferior {
+    padding: 19px 15px;
+    box-sizing: border-box;
+    text-align: center;
+    background: rgba(25, 0, 8, 0.28);
+    border-top: 1px solid rgba(255, 255, 255, 0.16);
+}
+
+.footer-inferior p {
+    margin: 0;
+    color: #f8dce5;
+    font-size: 12px;
+    line-height: 1.7;
+}
+
+/* MODO OSCURO */
+
+body.modo-oscuro .footer-amore {
+    background: linear-gradient(
+        125deg,
+        #170e12,
+        #29151d,
+        #40202b,
+        #211219
+    );
+    background-size: 250% 250%;
+    border-top-color: #d76b8a;
+}
+
+body.modo-oscuro .footer-enlaces a {
+    color: #ffc3d6;
+    background: rgba(255, 255, 255, 0.035);
+    border-color: rgba(255, 150, 190, 0.5);
+}
+
+body.modo-oscuro .footer-enlaces a:hover {
+    color: #fff;
+    background: #7d1832;
+    border-color: #ffb5ce;
+    box-shadow:
+        0 0 8px #ff8ab0,
+        0 0 18px rgba(255, 70, 140, 0.8),
+        0 0 32px rgba(255, 70, 140, 0.45);
+}
+
+body.modo-oscuro .footer-inferior {
+    background: rgba(0, 0, 0, 0.25);
+}
+
+/* TABLETS */
+
+@media (max-width: 1050px) {
+    .footer-contenido {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 36px;
+        padding: 42px 6%;
+    }
+}
+
+/* CELULARES */
+
+@media (max-width: 560px) {
+    .footer-contenido {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 30px;
+        padding: 35px 7%;
+    }
+
+    .footer-logo {
+        font-size: 30px;
+    }
+
+    .footer-columna h3 {
+        font-size: 17px;
+    }
+
+    .footer-frase {
+        gap: 8px;
+        padding: 16px 12px;
+    }
+
+    .footer-frase p {
+        font-size: 12px;
+    }
+}
+
+/* RESPETAR PREFERENCIAS DE MOVIMIENTO */
+
+@media (prefers-reduced-motion: reduce) {
+    .footer-amore,
+    .footer-corazon {
+        animation: none;
+    }
+
+    .footer-enlaces a,
+    .footer-enlace-texto,
+    .footer-navegacion a {
+        transition: none;
+    }
+}
+
+
+.footer-amore {
+    position: relative;
+    overflow: hidden;
+    margin-top: 70px;
+    padding: 50px 7% 0;
+    color: #ffffff;
+    background: linear-gradient(135deg, #641326, #8e1934, #a51d35);
+    background-size: 200% 200%;
+    animation: footer-fondo 10s ease infinite;
+}
+
+@keyframes footer-fondo {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* =========================
+   CONTENIDO PRINCIPAL
+========================= */
+
+.footer-contenido {
+    display: grid;
+    grid-template-columns: 1.25fr 1.2fr 1fr 1fr;
+    gap: 35px;
+    max-width: 1250px;
+    margin: 0 auto;
+    padding-bottom: 40px;
+}
+
+.footer-columna {
+    min-width: 0;
+}
+
+.footer-columna h3 {
+    position: relative;
+    margin: 5px 0 22px;
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.footer-columna h3::after {
+    content: "";
+    display: block;
+    width: 36px;
+    height: 3px;
+    margin-top: 10px;
+    border-radius: 5px;
+    background: #f1a7ba;
+}
+
+.footer-columna p {
+    color: #f5dce3;
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+/* =========================
+   INFORMACIÓN DE AMORE
+========================= */
+
+.footer-logo {
+    margin: 0 0 8px;
+    color: #ffffff;
+    font-size: 38px;
+    font-weight: 800;
+    letter-spacing: 3px;
+}
+
+.footer-subtitulo {
+    display: inline-block;
+    margin-bottom: 12px;
+    color: #f1a7ba;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+.footer-tienda > p {
+    margin: 10px 0 18px;
+}
+
+.footer-enlace-texto {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: color 0.3s ease, gap 0.3s ease;
+}
+
+.footer-enlace-texto:hover {
+    gap: 11px;
+    color: #f1a7ba;
+}
+
+/* =========================
+   REDES SOCIALES
+========================= */
+
+.footer-redes > p {
+    margin: 0 0 20px;
+}
+
+.footer-enlaces {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 14px;
+}
+
+/* BOTONES TRANSPARENTES EN MODO CLARO */
+
+.footer-enlaces a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 46px;
+    height: 46px;
+    border: 1.5px solid transparent;
+    border-radius: 14px;
+    background: transparent;
+    font-size: 22px;
+    text-decoration: none;
+    transition:
+        transform 0.3s ease,
+        background-color 0.3s ease,
+        border-color 0.3s ease,
+        color 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+/* COLORES DE LOS ICONOS */
+
+.footer-enlaces a[aria-label="Facebook de AMORE"] {
+    color: #1877f2;
+}
+
+.footer-enlaces a[aria-label="TikTok de AMORE"] {
+    color: #ffffff;
+}
+
+.footer-enlaces a[aria-label="WhatsApp de AMORE"] {
+    color: #25d366;
+}
+
+/* FACEBOOK: FONDO AZUL AL ELEVARSE */
+
+.footer-enlaces a[aria-label="Facebook de AMORE"]:hover {
+    background: #1877f2;
+    border-color: #1877f2;
+    color: #ffffff;
+    transform: translateY(-6px);
+    box-shadow: 0 8px 18px #1877f255;
+}
+
+/* TIKTOK: FONDO NEGRO AL ELEVARSE */
+
+.footer-enlaces a[aria-label="TikTok de AMORE"]:hover {
+    background: #000000;
+    border-color: #000000;
+    color: #ffffff;
+    transform: translateY(-6px);
+    box-shadow: 0 8px 18px #00000055;
+}
+
+/* WHATSAPP: FONDO VERDE AL ELEVARSE */
+
+.footer-enlaces a[aria-label="WhatsApp de AMORE"]:hover {
+    background: #25d366;
+    border-color: #25d366;
+    color: #ffffff;
+    transform: translateY(-6px);
+    box-shadow: 0 8px 18px #25d36655;
+}
+
+/* =========================
+   HORARIO DE ATENCIÓN
+========================= */
+
+.footer-horario-linea {
+    display: flex;
+    align-items: flex-start;
+    gap: 13px;
+}
+
+.footer-horario-linea > i {
+    margin-top: 3px;
+    color: #f1a7ba;
+    font-size: 22px;
+}
+
+.footer-horario-linea strong {
+    display: block;
+    margin-bottom: 6px;
+    color: #ffffff;
+    font-size: 14px;
+}
+
+.footer-horario-linea p {
+    margin: 0;
+}
+
+.footer-nota {
+    margin-top: 20px;
+    font-size: 13px !important;
+}
+
+/* =========================
+   UBICACIÓN
+========================= */
+
+.footer-ubicacion-linea {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 15px;
+}
+
+.footer-ubicacion-linea > i {
+    color: #f1a7ba;
+    font-size: 22px;
+}
+
+.footer-ubicacion-linea p {
+    margin: 0;
+}
+
+.footer-titulo-explorar {
+    margin-top: 28px !important;
+}
+
+/* =========================
+   NAVEGACIÓN DEL FOOTER
+========================= */
+
+.footer-navegacion {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 11px;
+}
+
+.footer-navegacion a {
+    color: #f5dce3;
+    font-size: 14px;
+    text-decoration: none;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.footer-navegacion a:hover {
+    color: #ffffff;
+    transform: translateX(5px);
+}
+
+/* =========================
+   FRASE INFERIOR
+========================= */
+
+.footer-frase {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    padding: 22px 10px;
+    border-top: 1px solid #ffffff30;
+    text-align: center;
+}
+
+.footer-frase p {
+    margin: 0;
+    color: #f5dce3;
+    font-size: 14px;
+    font-style: italic;
+    line-height: 1.7;
+}
+
+.footer-corazon {
+    color: #ffb6c8;
+    font-size: 23px;
+    animation: latido-amore 1.8s ease-in-out infinite;
+}
+
+@keyframes latido-amore {
+    0%, 100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.2);
+    }
+}
+
+/* =========================
+   DERECHOS RESERVADOS
+========================= */
+
+.footer-inferior {
+    margin: 0 -7.53%;
+    padding: 18px 15px;
+    background: #4b0d1c;
+    text-align: center;
+}
+
+.footer-inferior p {
+    margin: 0;
+    color: #f5dce3;
+    font-size: 12px;
+    line-height: 1.7;
+}
+
+.footer-inferior strong {
+    color: #ffffff;
+}
+
+/* =========================
+   MODO OSCURO
+========================= */
+
+body.modo-oscuro .footer-amore {
+    background: linear-gradient(135deg, #101010, #191919, #242424);
+    animation: none;
+}
+
+body.modo-oscuro .footer-inferior {
+    background: #080808;
+}
+
+body.modo-oscuro .footer-columna p,
+body.modo-oscuro .footer-frase p,
+body.modo-oscuro .footer-inferior p,
+body.modo-oscuro .footer-navegacion a {
+    color: #dddddd;
+}
+
+body.modo-oscuro .footer-logo,
+body.modo-oscuro .footer-columna h3,
+body.modo-oscuro .footer-horario-linea strong,
+body.modo-oscuro .footer-inferior strong {
+    color: #ffffff;
+}
+
+/* BOTONES OSCUROS CON BORDES DE COLOR */
+
+body.modo-oscuro .footer-enlaces a {
+    background: #191919;
+    border-width: 1.5px;
+}
+
+/* FACEBOOK */
+
+body.modo-oscuro .footer-enlaces a[aria-label="Facebook de AMORE"] {
+    color: #1877f2;
+    border-color: #1877f2;
+}
+
+body.modo-oscuro .footer-enlaces a[aria-label="Facebook de AMORE"]:hover {
+    background: #1877f2;
+    border-color: #1877f2;
+    color: #ffffff;
+}
+
+/* TIKTOK */
+
+body.modo-oscuro .footer-enlaces a[aria-label="TikTok de AMORE"] {
+    color: #ffffff;
+    border-color: #ffffff;
+}
+
+body.modo-oscuro .footer-enlaces a[aria-label="TikTok de AMORE"]:hover {
+    background: #000000;
+    border-color: #ffffff;
+    color: #ffffff;
+}
+
+/* WHATSAPP */
+
+body.modo-oscuro .footer-enlaces a[aria-label="WhatsApp de AMORE"] {
+    color: #25d366;
+    border-color: #25d366;
+}
+
+body.modo-oscuro .footer-enlaces a[aria-label="WhatsApp de AMORE"]:hover {
+    background: #25d366;
+    border-color: #25d366;
+    color: #ffffff;
+}
+
+/* =========================
+   DISEÑO RESPONSIVE
+========================= */
+
+@media (max-width: 1000px) {
+    .footer-contenido {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 35px;
+    }
+}
+
+@media (max-width: 600px) {
+    .footer-amore {
+        margin-top: 45px;
+        padding: 38px 7% 0;
+    }
+
+    .footer-contenido {
+        grid-template-columns: 1fr;
+        gap: 30px;
+        padding-bottom: 30px;
+    }
+
+    .footer-logo {
+        font-size: 33px;
+    }
+
+    .footer-inferior {
+        margin: 0 -7.53%;
+        padding: 17px 7%;
+    }
+
+    .footer-frase {
+        gap: 8px;
+    }
+
+    .footer-frase p {
+        font-size: 13px;
+    }
+}
+
+/* RESPETAR PREFERENCIAS DE MOVIMIENTO */
+
+@media (prefers-reduced-motion: reduce) {
+    .footer-amore,
+    .footer-corazon {
+        animation: none;
+    }
+
+    .footer-enlaces a,
+    .footer-enlace-texto,
+    .footer-navegacion a {
+        transition: none;
+    }
+}
+
+
+/* =========================
+   MODO OSCURO
+========================= */
+html.modo-oscuro,
+body.modo-oscuro {
+    background: linear-gradient(90deg, #4b1523, #160b0e, #4b1523);
+    color: #f5dfe3;
+}
+body.modo-oscuro .imagen-tienda {
+    background: #2b1b20;
+    border-color: #e66a7c;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+}
+body.modo-oscuro .etiqueta-imagen {
+    background: rgba(43, 27, 32, 0.92);
+}
+body.modo-oscuro .descripcion-tienda h1 {
+    color: #e66a7c;
+}
+body.modo-oscuro .pequeno-titulo {
+    color: #e66a7c;
+}
+body.modo-oscuro .frase-amore p {
+    color: #e66a7c;
+}
+body.modo-oscuro .adorno-frase {
+    color: #e66a7c;
+}
+body.modo-oscuro .titulo-seccion h2 {
+    color: #e66a7c;
+}
+body.modo-oscuro .titulo-seccion p {
+    color: #d9b9c0;
+}
+body.modo-oscuro .carrusel {
+    background: #2b1b20;
+    border-color: #e66a7c;
+}
+body.modo-oscuro .tarjeta-inicio {
+    background: #2b1b20;
+    color: #f5dfe3;
+}
+body.modo-oscuro .imagen-seccion {
+    background: #382027;
+}
+body.modo-oscuro .texto-seccion h2 {
+    color: #e66a7c;
+}
+body.modo-oscuro .mini-titulo {
+    color: #e66a7c;
+}
+body.modo-oscuro .carrusel-amore {
+    background: #2b1b20;
+    border-color: #e66a7c;
+}
+body.modo-oscuro .imagen-slide {
+    background: #382027;
+    border-color: #c84b61;
+}
+body.modo-oscuro .contenido-slide h2 {
+    color: #e66a7c;
+}
+body.modo-oscuro .contenido-slide span {
+    color: #e66a7c;
+}
+body.modo-oscuro .contenido-slide p {
+    color: #f5dfe3;
+}
+body.modo-oscuro .indicador-amore {
+    background: #70404b;
+}
+body.modo-oscuro .indicador-amore.activo {
+    background: #e66a7c;
+}
+body.modo-oscuro .frase-amore p {
+    color: #f5dfe3;
+}
+body.modo-oscuro .frase-amore p span,
+body.modo-oscuro .corazon-frase {
+    color: #e66a7c;
+}
+body.modo-oscuro .linea-frase {
+    background: linear-gradient(
+        to right,
+        transparent,
+        #e66a7c
+    );
+}
+body.modo-oscuro .linea-frase:last-child {
+    background: linear-gradient(
+        to left,
+        transparent,
+        #e66a7c
+    );
+}
+body.modo-oscuro .franja-amore {
+    background: linear-gradient(to right, #160b0e, #4b1523, #160b0e);
+    color: #e66a7c;
+    border-color: #e66a7c;
+}
+/* =========================
+   RESPONSIVE
+========================= */
+@media (max-width: 850px) {
+    header {
+        justify-content: center;
+    }
+    .nombre-tienda {
+        font-size: 30px;
+    }
+    nav {
+        width: 100%;
+        justify-content: center;
+        margin-left: 0;
+    }
+    .presentacion {
+        grid-template-columns: 1fr;
+    }
+    .descripcion-tienda {
+        text-align: center;
+    }
+    .descripcion-tienda h1::after {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+@media (max-width: 500px) {
+    main {
+        padding: 30px 5%;
+    }
+    .imagen-tienda {
+        height: 280px;
+    }
+    .descripcion-tienda h1 {
+        font-size: 32px;
+    }
+    .descripcion-tienda p {
+        font-size: 15px;
+    }
+    nav a,
+    #modoOscuro {
+        padding: 8px;
+        font-size: 12px;
+        width: 105px;
+        text-align: center;
+    }
+}
+@media (max-width: 700px) {
+    .carrusel-amore {
+        width: 94%;
+        height: 520px;
+    }
+    .slide-amore {
+        grid-template-columns: 1fr;
+        gap: 12px;
+        padding: 20px;
+    }
+    .imagen-slide {
+        height: 260px;
+    }
+    .contenido-slide {
+        padding: 5px 10px;
+    }
+    .contenido-slide h2 {
+        font-size: 30px;
+        margin: 7px 0 10px;
+    }
+    .contenido-slide p {
+        font-size: 14px;
+        line-height: 1.5;
+    }
+}
+@media (max-width: 600px) {
+    .frase-amore {
+        width: 94%;
+        gap: 10px;
+    }
+    .frase-amore p {
+        font-size: 20px;
+        white-space: normal;
+    }
+    .frase-amore .linea-frase {
+        min-width: 25px;
+    }
+}
+nav a {
+        font-size: 18px;
+    }
+    #modoOscuro {
+    width: 105px;
+        text-align: center;
+    }
+main {
+    width: 100% !important;
+}
+main > section {
+    display: block !important;
+    width: 100% !important;
+    float: none !important;
+    position: relative;
+}
+/* La presentación sí mantiene sus dos columnas */
+main .presentacion {
+    display: grid;
+    grid-template-columns: 1fr 1fr ;
+}
+/* Las tarjetas permanecen juntas entre ellas */
+main .secciones-amore {
+    display: grid !important;
+    grid-template-columns: repeat(3, 1fr) !important;
+}
+/* El resto queda uno debajo del otro */
+main .frase-amore,
+main .seccion-carrusel,
+main .franja-amore {
+    display: block !important;
+    clear: both !important;
+}
+.presentacion {
+    width: 100% !important;
+    display: grid !important;
+    grid-template-columns: minmax(500px, 1fr) minmax(350px, 1fr) !important;
+    gap: 30px !important;
+    align-items: start !important;
+}
+.imagen-tienda {
+    width: 100% !important;
+    min-width: 300px !important;
+}
+.descripcion-tienda {
+    width: 100% !important;
+    min-width: 0 !important;
+}
+@media (max-width: 1000px) {
+    .presentacion {
+        grid-template-columns: 1fr !important;
+    }
+    .imagen-tienda,
+    .descripcion-tienda {
+        width: 100% !important;
+    }
+}
+
+
+/* ANIMACIÓN ELEGANTE DE LAS PESTAÑAS AMORE */
+nav a {
+    position: relative;
+    display: inline-block;
+    padding: 10px 13px;
+    color: inherit;
+    text-decoration: none;
+    border-radius: 8px;
+    transition:
+        color 0.3s ease,
+        background-color 0.3s ease,
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+/* Línea animada debajo del texto */
+nav a::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: 3px;
+    width: 0;
+    height: 2px;
+    border-radius: 5px;
+    background: white;
+    transform: translateX(-50%);
+    transition: width 0.35s ease;
+}
+
+/* Efecto al pasar el cursor */
+nav a:hover {
+    color: white;
+    background-color: white(165, 29, 53, 0.07);
+    transform: translateY(-3px);
+    box-shadow: 0 5px 14px rgba(165, 29, 53, 0.10);
+}
+
+nav a:hover::after {
+    width: 70%;
+}
+
+/* Efecto al pulsar */
+nav a:active {
+    transform: scale(0.96);
+}
+
+/* Modo oscuro */
+body.modo-oscuro nav a:hover {
+    color: #f0a0b0;
+    background-color: rgba(230, 106, 124, 0.12);
+}
+
+body.modo-oscuro nav a::after {
+    background: #e66a7c;
+}
+
+/* Accesibilidad: reducir movimiento si se solicita */
+@media (prefers-reduced-motion: reduce) {
+    nav a,
+    nav a::after {
+        transition: none;
+    }
+}
+
+
+/* HEADER EN MODO OSCURO */
+body.modo-oscuro header {
+    background: linear-gradient(135deg, #24151a, #3a1722, #24151a);
+    color: #f5dfe3;
+    border-bottom: 1px solid #7c293e;
+    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.3);
+    transition: background 0.4s ease, color 0.4s ease;
+}
+
+/* Nombre AMORE */
+body.modo-oscuro header .titulo-amore {
+    filter: drop-shadow(0 0 8px rgba(230, 106, 124, 0.35));
+}
+
+/* Pestañas del menú */
+body.modo-oscuro header nav a {
+    color: #f5dfe3;
+}
+
+body.modo-oscuro header nav a:hover {
+    color: #ff9eaf;
+    background-color: rgba(230, 106, 124, 0.12);
+}
+
+/* Botón de modo oscuro */
+body.modo-oscuro header button {
+    color: #f5dfe3;
+    border-color: #9b4055;
+}
+
+/* Transición del encabezado */
+header {
+    transition: background 0.4s ease, color 0.4s ease,
+                box-shadow 0.4s ease;
+}
+
+
+/* AMORE — DEGRADADO ELEGANTE ANIMADO */
+.nombre-tienda {
+    position: relative;
+    display: inline-block;
+
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(32px, 4vw, 48px);
+    font-weight: 700;
+    font-style: italic;
+    letter-spacing: 4px;
+    margin: 0 0 14px;
+
+    /* Degradado rosa perlado y dorado */
+    background: linear-gradient(
+        135deg,
+        #fff0f4 0%,
+        #ffd0df 25%,
+        #f5c78e 48%,
+        #ffe5ec 68%,
+        #f4a9c1 85%,
+        #fff0f4 100%
+    );
+
+    background-size: 100% 100%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke: 0.4px rgba(255, 240, 244, 0.5);
+
+    text-shadow: 0 2px 2px rgba(110, 35, 58, 0.18);
+
+    animation: presenciaAmore 4s ease-in-out infinite;
+}
+
+/* Movimiento sutil y permanente */
+@keyframes presenciaAmore {
+    0%, 100% {
+        transform: rotate(-0.3deg);
+        text-shadow: 0 2px 2px rgba(110, 35, 58, 0.15);
+    }
+    50% {
+        transform: rotate(0.3deg);
+        text-shadow: 0 2px 4px rgba(110, 35, 58, 0.3);
+    }
+}
+
+/* Línea decorativa animada */
+.nombre-tienda::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: -8px;
+    width: 70%;
+    height: 2px;
+    border-radius: 10px;
+
+    background: linear-gradient(
+        90deg,
+        transparent,
+        #ffd0df,
+        #f5c78e,
+        #ffe5ec,
+        transparent
+    );
+
+    transform: translateX(-50%) scaleX(0.72);
+    transform-origin: center;
+    animation: lineaAmore 3s ease-in-out infinite;
+}
+
+@keyframes lineaAmore {
+    0%, 100% {
+        transform: translateX(-50%) scaleX(0.72);
+        opacity: 0.75;
+    }
+    50% {
+        transform: translateX(-50%) scaleX(1);
+        opacity: 1;
+    }
+}
+
+/* Modo oscuro: tonos más luminosos */
+body.modo-oscuro .nombre-tienda {
+    background-image: linear-gradient(
+        135deg,
+        #fff1f6 0%,
+        #ffb9d1 28%,
+        #f5d5a1 50%,
+        #ffe6ef 72%,
+        #e99ab9 88%,
+        #fff1f6 100%
+    );
+
+    -webkit-text-stroke-color: rgba(255, 230, 239, 0.65);
+    text-shadow: 0 2px 3px rgba(0, 0, 0, 0.25);
+}
+
+body.modo-oscuro .nombre-tienda::after {
+    background: linear-gradient(
+        90deg,
+        transparent,
+        #ffb9d1,
+        #f5d5a1,
+        #ffe6ef,
+        transparent
+    );
+}
+
+/* Accesibilidad */
+@media (prefers-reduced-motion: reduce) {
+    .nombre-tienda,
+    .nombre-tienda::after {
+        animation: none;
+        transform: none;
+    }
+}
+
+/* FONDO ANIMADO DE AMORE */
+body {
+    position: relative;
+    isolation: isolate;
+    background: #fff4f6;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    pointer-events: none;
+
+    background: linear-gradient(
+        125deg,
+        #fff0f4,
+        #f6b6c8,
+        #fce3c5,
+        #eaa0b5,
+        #fff5f6,
+        #d97994,
+        #fff0f4
+    );
+
+    background-size: 300% 300%;
+    animation: fondoAmore 18s ease-in-out infinite;
+    animation-delay: var(--fondo-delay, 0s);
+}
+
+/* Movimiento continuo */
+@keyframes fondoAmore {
+    0%   { background-position: 0% 50%; }
+    50%  { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Fondo para modo oscuro */
+body.modo-oscuro::before {
+    background: linear-gradient(
+        125deg,
+        #241018,
+        #69243b,
+        #321725,
+        #84334f,
+        #472033,
+        #241018
+    );
+
+    background-size: 300% 300%;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    body::before {
+        animation: none;
+    }
+}
+
+/* EVITAR EL PARPADEO DEL TEMA */
+html {
+    background-color: #fff4f6;
+}
+
+html.modo-oscuro {
+    background-color: #181113;
+}
+
+html.modo-oscuro body {
+    background-color: #181113;
+    color: #f5dfe3;
+}
+
+body {
+    padding-top: 0 !important;
+    margin-top: 0 !important;
+}
+
+header {
+    margin-bottom: 0 !important;
+}
+
+main {
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+    padding: 30px !important;
+}
+
+main > section:first-child {
+    margin-top: 0 !important;
+}
+
+/* ==========================================
+   AMORE - ANIMACIONES EXTRA PARA INICIO
+========================================== */
+
+/* 1. Aparición progresiva de las secciones */
+
+.inicio-presentacion,
+.inicio-bienvenida,
+.inicio-seccion-carrusel,
+.inicio-banner-final {
+    animation: amoreEntradaPremium 0.9s cubic-bezier(.2,.7,.2,1) both;
+}
+
+.inicio-bienvenida {
+    animation-delay: 0.12s;
+}
+
+.inicio-seccion-carrusel {
+    animation-delay: 0.2s;
+}
+
+.inicio-banner-final {
+    animation-delay: 0.28s;
+}
+
+@keyframes amoreEntradaPremium {
+    from {
+        opacity: 0;
+        transform: translateY(32px) scale(0.985);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+/* 2. Movimiento suave de la imagen principal */
+
+.inicio-imagen-marco {
+    animation:
+        amoreImagenEntrada 1s ease both,
+        amoreFlotarImagen 6s ease-in-out 1s infinite;
+}
+
+@keyframes amoreImagenEntrada {
+    from {
+        opacity: 0;
+        transform: translateX(-35px) scale(0.96);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0) scale(1);
+    }
+}
+
+@keyframes amoreFlotarImagen {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-7px);
+    }
+}
+
+/* 3. Brillo que recorre los bordes degradados */
+
+.inicio-presentacion,
+.inicio-bienvenida,
+.inicio-carrusel,
+.inicio-banner-final {
+    background-size: 100% 100%, 300% 300%;
+    animation:
+        amoreBordeBrillante 8s ease-in-out infinite;
+}
+
+@keyframes amoreBordeBrillante {
+    0%, 100% {
+        background-position: 0 0, 0% 50%;
+    }
+    50% {
+        background-position: 0 0, 100% 50%;
+    }
+}
+
+/* 4. El sello decorativo flota y gira ligeramente */
+
+.inicio-sello-imagen {
+    animation: amoreSelloFlotante 5s ease-in-out infinite;
+}
+
+@keyframes amoreSelloFlotante {
+    0%, 100% {
+        transform: translateY(0) rotate(7deg);
+    }
+    50% {
+        transform: translateY(-9px) rotate(2deg);
+    }
+}
+
+/* 5. Título AMORE con un brillo sutil */
+
+.inicio-descripcion h1 span {
+    background-size: 200% auto;
+    animation: amoreTextoBrillante 5s linear infinite;
+}
+
+@keyframes amoreTextoBrillante {
+    0% {
+        background-position: 0% center;
+    }
+    100% {
+        background-position: 200% center;
+    }
+}
+
+/* 6. Línea decorativa que se ensancha */
+
+.inicio-linea-decorativa {
+    transform-origin: left center;
+    animation: amoreLineaViva 3s ease-in-out infinite alternate;
+}
+
+@keyframes amoreLineaViva {
+    from {
+        transform: scaleX(0.65);
+        opacity: 0.65;
+    }
+    to {
+        transform: scaleX(1.15);
+        opacity: 1;
+    }
+}
+
+/* 7. Las cajas responden al pasar el cursor */
+
+.inicio-presentacion,
+.inicio-bienvenida,
+.inicio-carrusel,
+.inicio-banner-final {
+    transition:
+        box-shadow 0.35s ease,
+        border-radius 0.35s ease;
+}
+
+.inicio-presentacion:hover,
+.inicio-bienvenida:hover,
+.inicio-carrusel:hover,
+.inicio-banner-final:hover {
+    box-shadow: 0 20px 45px rgba(100, 19, 38, 0.2);
+}
+
+/* 8. Botones con elevación y brillo */
+
+.inicio-boton {
+    position: relative;
+    overflow: hidden;
+    isolation: isolate;
+}
+
+.inicio-boton::before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: -50%;
+    left: -80%;
+    width: 45%;
+    height: 200%;
+    background: rgba(255, 255, 255, 0.23);
+    transform: rotate(25deg);
+    transition: left 0.65s ease;
+}
+
+.inicio-boton:hover::before {
+    left: 140%;
+}
+
+/* 9. Decoraciones con movimiento */
+
+.bienvenida-adorno-uno {
+    animation: amoreGiroDecorativo 9s linear infinite;
+}
+
+.bienvenida-adorno-dos {
+    animation: amoreLatido 3s ease-in-out infinite;
+}
+
+.banner-destello-uno {
+    animation: amoreGiroDecorativo 12s linear infinite;
+}
+
+.banner-destello-dos {
+    animation: amoreLatido 3.5s ease-in-out infinite;
+}
+
+@keyframes amoreGiroDecorativo {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes amoreLatido {
+    0%, 100% {
+        transform: scale(1);
+        opacity: 0.55;
+    }
+    50% {
+        transform: scale(1.17);
+        opacity: 1;
+    }
+}
+
+/* 10. Entrada más dinámica del contenido del carrusel */
+
+.inicio-diapositiva.activa .diapositiva-contenido {
+    animation: amoreTextoCarrusel 0.65s ease both;
+}
+
+.inicio-diapositiva.activa .diapositiva-numero {
+    animation: amoreSubirTexto 0.55s 0.08s both;
+}
+
+.inicio-diapositiva.activa .diapositiva-contenido h3 {
+    animation: amoreSubirTexto 0.6s 0.15s both;
+}
+
+.inicio-diapositiva.activa .diapositiva-contenido > p {
+    animation: amoreSubirTexto 0.6s 0.23s both;
+}
+
+.inicio-diapositiva.activa .diapositiva-contenido .inicio-boton {
+    animation: amoreSubirTexto 0.6s 0.3s both;
+}
+
+@keyframes amoreTextoCarrusel {
+    from {
+        opacity: 0.3;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes amoreSubirTexto {
+    from {
+        opacity: 0;
+        transform: translateY(16px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* 11. Flechas del carrusel con movimiento */
+
+.carrusel-flecha {
+    transition:
+        transform 0.25s ease,
+        background 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+.carrusel-anterior:hover {
+    transform: translate(-3px, -50%) scale(1.08);
+}
+
+.carrusel-siguiente:hover {
+    transform: translate(3px, -50%) scale(1.08);
+}
+
+/* 12. Puntos activos del carrusel */
+
+.carrusel-punto {
+    transition:
+        width 0.35s ease,
+        background 0.35s ease,
+        box-shadow 0.35s ease;
+}
+
+.carrusel-punto.activo {
+    box-shadow: 0 0 12px rgba(165, 29, 53, 0.3);
+}
+
+/* 13. Brillo en el icono del banner */
+
+.banner-icono {
+    animation: amoreIconoFlotante 4.5s ease-in-out infinite;
+}
+
+@keyframes amoreIconoFlotante {
+    0%, 100% {
+        transform: translateY(0) rotate(-5deg);
+        box-shadow: 0 7px 17px rgba(100, 19, 38, 0.13);
+    }
+    50% {
+        transform: translateY(-6px) rotate(2deg);
+        box-shadow: 0 14px 24px rgba(100, 19, 38, 0.2);
+    }
+}
+
+/* 14. Ajustes para celulares */
+
+@media (max-width: 650px) {
+    .inicio-imagen-marco {
+        animation: amoreImagenEntrada 0.8s ease both;
+    }
+
+    .inicio-sello-imagen {
+        animation-duration: 6s;
+    }
+
+    .inicio-presentacion:hover,
+    .inicio-bienvenida:hover,
+    .inicio-carrusel:hover,
+    .inicio-banner-final:hover {
+        box-shadow: 0 12px 25px rgba(100, 19, 38, 0.15);
+    }
+}
+
+/* 15. Respetar a quienes prefieren menos movimiento */
+
+@media (prefers-reduced-motion: reduce) {
+    .inicio-amore *,
+    .inicio-amore *::before,
+    .inicio-amore *::after {
+        animation: none !important;
+        transition: none !important;
+    }
+}
+/* Tamaño fijo del carrusel */
+.inicio-carrusel {
+    position: relative;
+    width: 100%;
+    height: 420px;
+    overflow: hidden;
+    border-radius: 22px;
+}
+
+/* Todas las diapositivas ocupan el mismo espacio */
+.inicio-diapositiva {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: stretch;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.6s ease, visibility 0.6s ease;
+}
+
+/* Solo se muestra la diapositiva activa */
+.inicio-diapositiva.activa {
+    opacity: 1;
+    visibility: visible;
+    z-index: 1;
+}
+
+/* Tamaño predefinido para las imágenes */
+.diapositiva-imagen {
+    width: 100%;
+    height: 100%;
+    min-width: 0;
+    overflow: hidden;
+}
+
+.diapositiva-imagen img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+/* Mantener el contenido dentro del carrusel */
+.diapositiva-contenido {
+    min-width: 0;
+    height: 100%;
+    overflow: auto;
+    box-sizing: border-box;
+}
+
+/* Adaptación a celulares */
+@media (max-width: 650px) {
+    .inicio-carrusel {
+        height: 500px;
+    }
+
+    .inicio-diapositiva {
+        grid-template-columns: 1fr;
+        grid-template-rows: 55% 45%;
+    }
+
+    .diapositiva-imagen {
+        width: 100%;
+        height: 100%;
+    }
+
+    .diapositiva-contenido {
+        width: 100%;
+        height: 100%;
+        padding: 15px;
+    }
+}
+/* BOTÓN PARA VOLVER ARRIBA */
+
+.boton-volver-arriba {
+    position: fixed;
+    right: 22px;
+    bottom: 25px;
+    z-index: 9998;
+
+    width: 48px;
+    height: 48px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 2px solid #e9a1b2;
+    border-radius: 15px;
+    background: linear-gradient(135deg, #641326, #a51d35);
+
+    color: white;
+    font-size: 28px;
+    font-weight: bold;
+
+    cursor: pointer;
+    box-shadow: 0 5px 16px rgba(100, 19, 38, 0.28);
+
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+
+    transform: translateY(12px);
+    transition: 0.25s ease;
+}
+
+.boton-volver-arriba.visible {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    transform: translateY(0);
+}
+
+.boton-volver-arriba:hover {
+    background: #a51d35;
+    transform: translateY(-4px);
+}
+
+body.modo-oscuro .boton-volver-arriba {
+    border-color: #b32531;
+    background: linear-gradient(135deg, #5e0614, #851d2b);
+    color: #ffeaf0;
+}
+
+@media (max-width: 600px) {
+    .boton-volver-arriba {
+        right: 14px;
+        bottom: 16px;
+        width: 44px;
+        height: 44px;
+    }
+}
+/* ICONOS DEL FOOTER: SIN BRILLO */
+.footer-amore i,
+.footer-amore a,
+.footer-amore a:hover {
+    box-shadow: none !important;
+    text-shadow: none !important;
+    filter: none !important;
+}
+
+/* MODO CLARO: CONSERVAR EL BORDE DE COLOR */
+body:not(.modo-oscuro) .footer-enlaces a {
+    border: 1px solid #d17485;
+}
+
+/* MODO OSCURO: BORDE NEUTRO */
+body.modo-oscuro .footer-enlaces a {
+    border: 1px solid #444;
+}

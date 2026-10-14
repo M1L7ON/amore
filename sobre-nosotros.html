@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <script>
+(function () {
+    try {
+        const tema = localStorage.getItem("modoAMORE");
+        const raiz = document.documentElement;
+
+        raiz.classList.add("tema-preparando");
+
+        if (tema === "oscuro") {
+            raiz.classList.add("modo-oscuro");
+        } else {
+            raiz.classList.remove("modo-oscuro");
+        }
+    } catch (e) {}
+})();
+</script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AMORE | Sobre nosotros</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>❤️</text></svg>">
+    <link rel="stylesheet" href="sobre-nosotros.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+<body>
+    <button
+    id="volverArriba"
+    class="boton-volver-arriba"
+    type="button"
+    aria-label="Volver arriba"
+    title="Volver arriba"
+>
+    ↑
+    </button>
+    <!-- HEADER -->
+    <header>
+        <div class="logo">
+            <img src="LOGO.jpeg" alt="Logo de AMORE">
+        </div>
+        <div class="nombre-tienda">
+            AMORE
+        </div>
+        <nav>
+            <a href="index.html">Inicio</a>
+            <a href="accesorios.html">Accesorios</a>
+            <a href="regalos.html">Regalos</a>
+            <a href="sobre-nosotros.html">Sobre nosotros</a>
+            <button id="modoOscuro">
+                ☾ Oscuro
+            </button>
+        </nav>
+    </header>
+    <!-- CUERPO -->
+
+<main class="sobre-amore">
+
+    <!-- PORTADA -->
+    <section class="sobre-portada">
+        <div class="sobre-portada-contenido">
+            <span class="sobre-etiqueta">CONOCE NUESTRA ESENCIA</span>
+            <h1>Sobre nosotros</h1>
+            <div class="sobre-linea"></div>
+            <p>
+                En AMORE encontrarás detalles especiales para regalar,
+                compartir momentos y expresar afecto en cada ocasión.
+            </p>
+            <a href="#conocenos" class="sobre-boton">
+                Descubre AMORE <span>↓</span>
+            </a>
+        </div>
+
+        <div class="sobre-portada-decoracion" aria-hidden="true">
+            <div class="sobre-circulo circulo-grande"></div>
+            <div class="sobre-circulo circulo-pequeno"></div>
+            <div class="sobre-letra">A</div>
+            <div class="sobre-sello">HECHO PARA<br>REGALAR</div>
+        </div>
+    </section>
+
+    <!-- INFORMACIÓN ORGANIZADA -->
+    <section class="sobre-estante" id="conocenos">
+
+        <div class="sobre-titulo-seccion">
+            <span>UN POCO DE NOSOTROS</span>
+            <h2>Detalles que transmiten cariño</h2>
+            <p>Conoce lo que nos representa y lo que puedes encontrar en nuestra tienda.</p>
+        </div>
+
+        <div class="sobre-grid">
+
+            <!-- QUIÉNES SOMOS -->
+            <article class="sobre-tarjeta sobre-quienes">
+                <div class="sobre-numero">01</div>
+                <div class="sobre-icono" aria-hidden="true">♡</div>
+                <span class="sobre-categoria">NUESTRA ESENCIA</span>
+                <h3>Quiénes somos</h3>
+                <p>
+                    Nuestra tienda AMORE es un emprendimiento dedicado a ofrecer
+                    productos pensados principalmente para regalar y expresar
+                    afecto en diferentes ocasiones. Buscamos brindar distintas
+                    opciones para encontrar un detalle especial para familiares,
+                    amigos o seres queridos.
+                </p>
+                <p>
+                    AMORE es un espacio donde reunimos productos variados y
+                    alternativas para diferentes gustos, necesidades y momentos
+                    especiales.
+                </p>
+                <div class="sobre-pie-tarjeta">Un detalle puede decir mucho.</div>
+            </article>
+
+            <!-- LO QUE OFRECEMOS -->
+            <article class="sobre-tarjeta sobre-ofrecemos">
+                <div class="sobre-numero">02</div>
+                <div class="sobre-icono" aria-hidden="true">✧</div>
+                <span class="sobre-categoria">NUESTROS PRODUCTOS</span>
+                <h3>Lo que ofrecemos</h3>
+                <p>
+                    Contamos con diferentes alternativas para cumpleaños,
+                    aniversarios, celebraciones y otras fechas importantes.
+                    Nuestro objetivo es facilitar la elección de un regalo
+                    y ayudar a encontrar un detalle adecuado para cada ocasión.
+                </p>
+
+                <div class="sobre-productos">
+                    <div class="sobre-producto">
+                        <span class="producto-simbolo">✿</span>
+                        <span>Detalles</span>
+                    </div>
+                    <div class="sobre-producto">
+                        <span class="producto-simbolo">♡</span>
+                        <span>Regalos</span>
+                    </div>
+                    <div class="sobre-producto">
+                        <span class="producto-simbolo">◇</span>
+                        <span>Accesorios</span>
+                    </div>
+                    <div class="sobre-producto">
+                        <span class="producto-simbolo">✧</span>
+                        <span>Cosméticos</span>
+                    </div>
+                </div>
+
+                <div class="sobre-pie-tarjeta">Opciones para diferentes ocasiones.</div>
+            </article>
+
+        </div>
+    </section>
+
+    <!-- UBICACIÓN -->
+    
+<!-- UBICACIÓN DE AMORE -->
+<section class="sobre-ubicacion" id="ubicacion">
+
+    <div class="ubicacion-contenido">
+        <span class="sobre-categoria">ESTAMOS AQUÍ</span>
+        <h2>Visítanos en AMORE</h2>
+
+        <p>
+            Encuéntranos en nuestra tienda y descubre las diferentes
+            opciones que tenemos para ti.
+        </p>
+
+        <div class="ubicacion-direccion">
+            <span class="ubicacion-pin">⌖</span>
+            <div>
+                <strong>Nuestra dirección</strong>
+                <p id="direccionAmore">
+                    Calle Cochabamba entre 6 de Octubre y Potosí,
+                    frente a la Facultad de Economía, Oruro, Bolivia.
+                </p>
+            </div>
+        </div>
+
+        <div class="ubicacion-botones">
+            <a
+                class="sobre-boton boton-ubicacion"
+                href="https://www.google.com/maps/search/?api=1&query=Calle+Cochabamba+entre+6+de+Octubre+y+Potosi+frente+a+la+Facultad+de+Economia+Oruro+Bolivia"
+                target="_blank"
+                rel="noopener noreferrer">
+                Abrir en Google Maps ↗
+            </a>
+
+            <button
+                type="button"
+                class="sobre-boton boton-copiar"
+                id="copiarDireccion">
+                Copiar dirección
+            </button>
+        </div>
+
+        <p class="sobre-mensaje" id="mensajeDireccion" role="status"></p>
+    </div>
+
+    <!-- MAPA VISIBLE DENTRO DE LA PÁGINA -->
+    <div class="ubicacion-mapa">
+        <iframe
+            src="https://maps.google.com/maps?q=Calle%20Cochabamba%20entre%206%20de%20Octubre%20y%20Potosi%2C%20Oruro%2C%20Bolivia&output=embed"
+            title="Mapa de ubicación de la tienda AMORE en Oruro"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            allowfullscreen>
+        </iframe>
+
+        <div class="mapa-etiqueta">
+            <span>⌖</span>
+            <div>
+                <strong>Encuéntranos</strong>
+                <small>Oruro, Bolivia</small>
+            </div>
+        </div>
+    </div>
+
+</section>
+
+    <!-- CIERRE -->
+    <section class="sobre-cierre">
+        <span aria-hidden="true">♡</span>
+        <p>AMORE, detalles para cada momento especial.</p>
+    </section>
+
+</main>
+    <!-- =========================
+         PIE DE PÁGINA / FOOTER
+    ========================== -->
+<footer class="footer-amore">
+
+    <div class="footer-contenido">
+
+        <!-- INFORMACIÓN DE AMORE -->
+        <div class="footer-columna footer-tienda">
+            <h2 class="footer-logo">AMORE</h2>
+            <span class="footer-subtitulo">Detalles para cada momento</span>
+
+            <p>
+                En AMORE encontrarás flores, regalos para fechas especiales,
+                accesorios y detalles para sorprender a las personas que quieres.
+            </p>
+
+            <a href="sobre-nosotros.html" class="footer-enlace-texto">
+                Conoce nuestra tienda →
+            </a>
+        </div>
+
+        <!-- REDES SOCIALES -->
+        <div class="footer-columna footer-redes">
+            <h3>Síguenos</h3>
+
+            <p>
+                Descubre nuestros productos y conoce nuestras novedades
+                a través de nuestras redes sociales.
+            </p>
+
+            <div class="footer-enlaces">
+                <a href="https://www.facebook.com/share/1EnmWUCuBG/"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   aria-label="Facebook de AMORE"
+                   title="Facebook">
+                    <i class="fa-brands fa-facebook-f"></i>
+                </a>
+
+                <a href="https://www.tiktok.com/@accesoriosyregalosamore?_r=1&_t=ZS-99nA0Rarass"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   aria-label="TikTok de AMORE"
+                   title="TikTok">
+                    <i class="fa-brands fa-tiktok"></i>
+                </a>
+
+                <a href="https://wa.me/59167249175?text=Hola%20AMORE,%20quisiera%20consultar%20sobre%20un%20producto."
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   aria-label="WhatsApp de AMORE"
+                   title="WhatsApp">
+                    <i class="fa-brands fa-whatsapp"></i>
+                </a>
+            </div>
+        </div>
+
+        <!-- HORARIO DE ATENCIÓN -->
+        <div class="footer-columna footer-horario">
+            <h3>Horario de atención</h3>
+
+            <div class="footer-horario-linea">
+                <i class="fa-regular fa-clock"></i>
+                <div>
+                    <strong>Lunes a sábado</strong>
+                    <p>9:00 a. m. – 10:00 p. m.</p>
+                </div>
+            </div>
+
+            <p class="footer-nota">
+                Estamos para ayudarte a encontrar un detalle especial.
+            </p>
+        </div>
+
+        <!-- UBICACIÓN Y NAVEGACIÓN -->
+        <div class="footer-columna footer-ubicacion">
+            <h3>Encuéntranos</h3>
+
+            <div class="footer-ubicacion-linea">
+                <i class="fa-solid fa-location-dot"></i>
+                <p>Oruro, Bolivia</p>
+            </div>
+
+            <a href="sobre-nosotros.html#ubicacion"
+               class="footer-enlace-texto">
+                Ver ubicación de la tienda →
+            </a>
+
+            <h3 class="footer-titulo-explorar">Explora AMORE</h3>
+
+            <nav class="footer-navegacion" aria-label="Navegación del pie de página">
+                <a href="index.html">Inicio</a>
+                <a href="accesorios.html">Accesorios</a>
+                <a href="regalos.html">Regalos</a>
+                <a href="sobre-nosotros.html">Sobre nosotros</a>
+            </nav>
+        </div>
+
+    </div>
+
+    <!-- MENSAJE INFERIOR -->
+    <div class="footer-frase">
+        <span class="footer-corazon">♡</span>
+        <p>Un detalle puede hacer especial cualquier momento.</p>
+        <span class="footer-corazon">♡</span>
+    </div>
+
+    <!-- DERECHOS RESERVADOS -->
+    <div class="footer-inferior">
+        <p>
+            © 2026 <strong>Tienda AMORE</strong>.
+            Todos los derechos reservados.
+        </p>
+    </div>
+
+</footer>
+
+    <script src="sobre-nosotros.js"></script>
+</body>
+</html>

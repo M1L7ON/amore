@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <script>
+(function () {
+    try {
+        const tema = localStorage.getItem("modoAMORE");
+        const raiz = document.documentElement;
+
+        raiz.classList.add("tema-preparando");
+
+        if (tema === "oscuro") {
+            raiz.classList.add("modo-oscuro");
+        } else {
+            raiz.classList.remove("modo-oscuro");
+        }
+    } catch (e) {}
+})();
+</script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AMORE | Regalos</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>❤️</text></svg>">
+    <link rel="stylesheet" href="regalos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+<body>
+    <button
+    id="volverArriba"
+    class="boton-volver-arriba"
+    type="button"
+    aria-label="Volver arriba"
+    title="Volver arriba"
+>
+    ↑
+    </button>
+    <!-- =========================
+         HEADER / CABECERA
+    ========================== -->
+    <header>
+        <!-- LOGO -->
+        <!-- Cambia el nombre de la imagen por tu logo -->
+        <div class="logo">
+            <img src="LOGO.jpeg" alt="Logo de AMORE">
+        </div>
+        <!-- NOMBRE DE LA TIENDA -->
+        <div class="nombre-tienda">
+            AMORE
+        </div>
+        <!-- MENÚ DE NAVEGACIÓN -->
+        <nav>
+            <a href="index.html">
+                Inicio
+            </a>
+            <a href="accesorios.html">
+                Accesorios
+            </a>
+            <a href="regalos.html">
+                Regalos
+            </a>
+            <a href="sobre-nosotros.html">
+                Sobre nosotros
+            </a>
+            <!-- MODO CLARO / OSCURO -->
+            <button id="modoOscuro">
+                ☾ Oscuro
+            </button>
+        </nav>
+    </header>
+    <!-- =========================
+         CUERPO DE LA PÁGINA
+    ========================== -->
+    <main>
+        <!-- TÍTULO + BUSCADOR -->
+        <section class="encabezado-productos">
+            <h1>
+                REGALOS
+            </h1>
+    
+
+<div class="buscador">
+    <input type="text" id="buscarProducto" placeholder="Buscar regalos...">
+    
+</div>
+
+<div id="mensajeBusqueda" class="mensaje-sin-resultados">
+    <div class="icono-sin-resultados">♡</div>
+    <h2>No encontramos ese producto</h2>
+    <p>Intenta buscar con otro nombre o palabra.</p>
+</div>
+        </section>
+        <!-- PRODUCTOS -->
+        <section class="productos">
+            <article class="tarjeta-producto">
+                <h2>OSO GIGANTE DORMILON</h2>
+                <div class="imagen-producto">
+                    <img src="r1.jpeg" alt="Regalo 1">
+                </div>
+                <p>Peluche gigante, suave y adorable, perfecto para abrazar y regalar.</p>
+                <span class="precio">Bs. 210,00</span>
+            </article>
+            <article class="tarjeta-producto">
+                <h2>PELUCHES DINOSPERRITOS</h2>
+                <div class="imagen-producto">
+                    <img src="r2.jpeg" alt="Regalo 2">
+                </div>
+                <p>Peluches alargados de dinosaurios y perritos, ideales para abrazar y decorar tu habitación.</p>
+                <span class="precio">Bs. 60,00</span>
+            </article>
+            <article class="tarjeta-producto">
+                <h2>OSITOS PARA PAREJA</h2>
+                <div class="imagen-producto">
+                    <img src="r3.jpeg" alt="Regalo 3">
+                </div>
+                <p>Tiernos ositos para parejas, perfectos para compartir un detalle especial con esa persona que tanto quieres.</p>
+                <span class="precio">Bs. 120,00</span>
+            </article>
+            <article class="tarjeta-producto">
+                <h2>OSOS MONITOS GIGANTES</h2>
+                <div class="imagen-producto">
+                    <img src="r4.jpeg" alt="Regalo 4">
+                </div>
+                <p>Ositos de peluche grandes, suaves y esponjosos, ideales para sorprender con un regalo encantador.</p>
+                <span class="precio">Bs. 100,00</span>
+            </article>
+            <article class="tarjeta-producto">
+                <h2>GIRASOLES</h2>
+                <div class="imagen-producto">
+                    <img src="r5.jpeg" alt="Regalo 5">
+                </div>
+                <p>Hermosos girasoles llenos de color y alegría, perfectos para regalar en cualquier ocasión.</p>
+                <span class="precio">Bs. 50,00</span>
+            </article>
+            <article class="tarjeta-producto">
+                <h2>TRIO DE OSITOS</h2>
+                <div class="imagen-producto">
+                    <img src="r6.jpeg" alt="Regalo 6">
+                </div>
+                <p> Un adorable trío de ositos Pardo, Panda y Polar, ideal para los amantes de estos divertidos personajes.</p>
+                <span class="precio">Bs. 180,00</span>
+            </article>
+            <article class="tarjeta-producto">
+                <h2>TAZAS</h2>
+                <div class="imagen-producto">
+                    <img src="r7.jpeg" alt="Regalo 7">
+                </div>
+                <p>Tazas decoradas con Pardo, Panda y Polar, perfectas para disfrutar tus bebidas favoritas.</p>
+                <span class="precio">Bs. 70,00</span>
+            </article>
+            <article class="tarjeta-producto">
+                <h2>LLAVEROS DE SNOOPY</h2>
+                <div class="imagen-producto">
+                    <img src="r8.jpeg" alt="Regalo 8">
+                </div>
+                <p>Llaveros de Snoopy, tiernos y originales, ideales para decorar tus llaves o mochila.</p>
+                <span class="precio">Bs. 20,00</span>
+            </article>
+            <article class="tarjeta-producto">
+                <h2>LLAVEROS DE PINGUINOS</h2>
+                <div class="imagen-producto">
+                    <img src="r9.jpeg" alt="Regalo 9">
+                </div>
+                <p> Llaveros de pingüinos, pequeños y encantadores, perfectos para llevar a todas partes.</p>
+                <span class="precio">Bs. 20,00</span>
+            </article>
+            <article class="tarjeta-producto">
+                <h2>PELUCHES DE STITCH</h2>
+                <div class="imagen-producto">
+                    <img src="r10.jpeg" alt="Regalo 10">
+                </div>
+                <p>Peluches de Stitch, suaves y adorables, ideales para sorprender a los amantes de este personaje.</p>
+                <span class="precio">Bs. 120,00</span>
+            </article>
+            <article class="tarjeta-producto">
+                <h2>ROSAS TEJIDAS</h2>
+                <div class="imagen-producto">
+                    <img src="r11.jpeg" alt="Regalo 11">
+                </div>
+                <p> Rosas tejidas a mano, delicadas y especiales, perfectas para regalar un detalle que dure mucho tiempo.</p>
+                <span class="precio">Bs. 60,00</span>
+            </article>
+            <article class="tarjeta-producto">
+                <h2>GIRASOLES</h2>
+                <div class="imagen-producto">
+                    <img src="r12.jpeg" alt="Regalo 12">
+                </div>
+                <p>Girasoles tejidos, llenos de color y ternura, ideales para alegrar el día de alguien especial.</p>
+                <span class="precio">Bs. 15,00</span>
+            </article>
+            <article class="tarjeta-producto">
+                <h2>ROSAS AZULES</h2>
+                <div class="imagen-producto">
+                    <img src="r13.jpeg" alt="Regalo 13">
+                </div>
+                <p>Rosas azules tejidas, originales y elegantes, perfectas para regalar algo diferente y significativo.</p>
+                <span class="precio">Bs. 35,00</span>
+            </article>
+            <article class="tarjeta-producto">
+                <h2>CAJA SORPRESA DE PELUCHE Y CARRITOS</h2>
+                <div class="imagen-producto">
+                    <img src="r14.jpeg" alt="Regalo 14">
+                </div>
+                <p>Cajas sorpresa con peluches y carritos, una combinación divertida y especial para sorprender.</p>
+                <span class="precio">Bs. 150,00</span>
+            </article>
+            <article class="tarjeta-producto">
+                <h2>CAJA SORPRESA Y PELUCHE</h2>
+                <div class="imagen-producto">
+                    <img src="r15.jpeg" alt="Regalo 15">
+                </div>
+                <p>Caja sorpresa con peluche, un detalle adorable que combina ternura y emoción en un solo regalo.</p>
+                <span class="precio">Bs. 120,00</span>
+            </article>
+            <article class="tarjeta-producto">
+                <h2>CAJA SORPRESA</h2>
+                <div class="imagen-producto">
+                    <img src="r16.jpeg" alt="Regalo 16">
+                </div>
+                <p>Cajas sorpresa decoradas, ideales para descubrir pequeños detalles preparados con mucho cariño.</p>
+                <span class="precio">Bs. 80,00</span>
+            </article>
+            <article class="tarjeta-producto">
+                <h2>GLOBOS PESONALIZADOS</h2>
+                <div class="imagen-producto">
+                    <img src="r17.jpeg" alt="Regalo 17">
+                </div>
+                <p>Globos personalizados, perfectos para celebrar cumpleaños, aniversarios y ocasiones especiales.</p>
+                <span class="precio">Bs. 45,00</span>
+            </article>
+            <article class="tarjeta-producto">
+                <h2>TAZAS PERSONALIZADAS CON FOTOGRAFIAS</h2>
+                <div class="imagen-producto">
+                    <img src="r18.jpeg" alt="Regalo 18">
+                </div>
+                <p>Tazas personalizadas con fotografías, ideales para conservar recuerdos bonitos y disfrutar tus bebidas favoritas.</p>
+                <span class="precio">Bs. 35,00</span>
+            </article>
+            <article class="tarjeta-producto">
+                <h2>CAJA DE JOYAS</h2>
+                <div class="imagen-producto">
+                    <img src="r19.jpeg" alt="Regalo 19">
+                </div>
+                <p>Cajas para joyas, elegantes y prácticas para guardar tus accesorios de manera organizada.</p>
+                <span class="precio">Bs. 65,00</span>
+            </article>
+            <article class="tarjeta-producto">
+                <h2>TAZAS TRANSPARENTES</h2>
+                <div class="imagen-producto">
+                    <img src="r20.jpeg" alt="Regalo 20">
+                </div>
+                <p>Tazas transparentes, modernas y delicadas, perfectas para disfrutar tus bebidas con estilo.</p>
+                <span class="precio">Bs. 50,00</span>
+            </article>
+            <article class="tarjeta-producto">
+                <h2>TAZAS PERSONALES</h2>
+                <div class="imagen-producto">
+                    <img src="r21.jpeg" alt="Regalo 21">
+                </div>
+                <p>Tazas personalizadas, diseñadas para darle un toque único y especial a cada momento.</p>
+                <span class="precio">Bs. 60,00</span>
+            </article>
+            <article class="tarjeta-producto">
+                <h2>TAZAS PARA COMPARTIR</h2>
+                <div class="imagen-producto">
+                    <img src="r22.jpeg" alt="Regalo 22">
+                </div>
+                <p>Tazas para compartir, ideales para disfrutar bebidas en compañía de alguien especial.</p>
+                <span class="precio">Bs. 69,98</span>
+            </article>
+            <article class="tarjeta-producto">
+                <h2>DECORACION Y GLOBOS</h2>
+                <div class="imagen-producto">
+                    <img src="r23.jpeg" alt="Regalo 23">
+                </div>
+                <p>Combos de decoración y globos, perfectos para crear ambientes alegres en tus celebraciones.</p>
+                <span class="precio">Bs. 58,00</span>
+            </article>
+            <article class="tarjeta-producto">
+                <h2>CARTELES PERSONALIZADOS</h2>
+                <div class="imagen-producto">
+                    <img src="r24.jpeg" alt="Regalo 24">
+                </div>
+                <p>Carteles personalizados, ideales para expresar mensajes especiales y decorar cualquier ocasión.</p>
+                <span class="precio">Bs. 65,00</span>
+            </article>
+            <article class="tarjeta-producto">
+                <h2>PAQUETES DE DECORACION</h2>
+                <div class="imagen-producto">
+                    <img src="r25.jpeg" alt="Regalo 25">
+                </div>
+                <p>Paquetes de decoración, perfectos para darle color y estilo a tus fiestas y celebraciones.</p>
+                <span class="precio">Bs. 15,00</span>
+            </article>
+            <article class="tarjeta-producto">
+                <h2>CAJITAS DE CHOCOLATES</h2>
+                <div class="imagen-producto">
+                    <img src="r26.jpeg" alt="Regalo 26">
+                </div>
+                <p>Cajitas de chocolates, un dulce detalle para demostrar cariño y sorprender a alguien especial.</p>
+                <span class="precio">Bs. 30,00</span>
+            </article>
+            <article class="tarjeta-producto">
+                <h2>COMBOS DE MAQUILLAJES</h2>
+                <div class="imagen-producto">
+                    <img src="r27.jpeg" alt="Regalo 27">
+                </div>
+                <p>Combos de maquillaje, ideales para complementar tu rutina de belleza con productos prácticos y bonitos.</p>
+                <span class="precio">Bs. 35,00</span>
+            </article>
+            <article class="tarjeta-producto">
+                <h2>VELAS AROMATICAS</h2>
+                <div class="imagen-producto">
+                    <img src="r28.jpeg" alt="Regalo 28">
+                </div>
+                <p>Velas aromáticas, perfectas para crear un ambiente acogedor y disfrutar de momentos de tranquilidad.</p>
+                <span class="precio">Bs. 50,00</span>
+            </article>
+            <article class="tarjeta-producto">
+                <h2>MARCOS PARA FOTOS</h2>
+                <div class="imagen-producto">
+                    <img src="r29.jpeg" alt="Regalo 29">
+                </div>
+                <p>Marcos para fotografías, ideales para conservar y exhibir tus recuerdos favoritos.</p>
+                <span class="precio">Bs. 20,00</span>
+            </article>
+            <article class="tarjeta-producto">
+                <h2>GLOBOS DE CORAZONES</h2>
+                <div class="imagen-producto">
+                    <img src="r30.jpeg" alt="Regalo 30">
+                </div>
+                <p>Un detalle colorido y romántico para sorprender a alguien especial.</p>
+                <span class="precio">Bs. 20,00</span>
+            </article>
+        </section>
+    </main>
+     <!-- =========================
+         PIE DE PÁGINA / FOOTER
+    ========================== -->
+<footer class="footer-amore">
+
+    <div class="footer-contenido">
+
+        <!-- INFORMACIÓN DE AMORE -->
+        <div class="footer-columna footer-tienda">
+            <h2 class="footer-logo">AMORE</h2>
+            <span class="footer-subtitulo">Detalles para cada momento</span>
+
+            <p>
+                En AMORE encontrarás flores, regalos para fechas especiales,
+                accesorios y detalles para sorprender a las personas que quieres.
+            </p>
+
+            <a href="sobre-nosotros.html" class="footer-enlace-texto">
+                Conoce nuestra tienda →
+            </a>
+        </div>
+
+        <!-- REDES SOCIALES -->
+        <div class="footer-columna footer-redes">
+            <h3>Síguenos</h3>
+
+            <p>
+                Descubre nuestros productos y conoce nuestras novedades
+                a través de nuestras redes sociales.
+            </p>
+
+            <div class="footer-enlaces">
+                <a href="https://www.facebook.com/share/1EnmWUCuBG/"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   aria-label="Facebook de AMORE"
+                   title="Facebook">
+                    <i class="fa-brands fa-facebook-f"></i>
+                </a>
+
+                <a href="https://www.tiktok.com/@accesoriosyregalosamore?_r=1&_t=ZS-99nA0Rarass"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   aria-label="TikTok de AMORE"
+                   title="TikTok">
+                    <i class="fa-brands fa-tiktok"></i>
+                </a>
+
+                <a href="https://wa.me/59167249175?text=Hola%20AMORE,%20quisiera%20consultar%20sobre%20un%20producto."
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   aria-label="WhatsApp de AMORE"
+                   title="WhatsApp">
+                    <i class="fa-brands fa-whatsapp"></i>
+                </a>
+            </div>
+        </div>
+
+        <!-- HORARIO DE ATENCIÓN -->
+        <div class="footer-columna footer-horario">
+            <h3>Horario de atención</h3>
+
+            <div class="footer-horario-linea">
+                <i class="fa-regular fa-clock"></i>
+                <div>
+                    <strong>Lunes a sábado</strong>
+                    <p>9:00 a. m. – 10:00 p. m.</p>
+                </div>
+            </div>
+
+            <p class="footer-nota">
+                Estamos para ayudarte a encontrar un detalle especial.
+            </p>
+        </div>
+
+        <!-- UBICACIÓN Y NAVEGACIÓN -->
+        <div class="footer-columna footer-ubicacion">
+            <h3>Encuéntranos</h3>
+
+            <div class="footer-ubicacion-linea">
+                <i class="fa-solid fa-location-dot"></i>
+                <p>Oruro, Bolivia</p>
+            </div>
+
+            <a href="sobre-nosotros.html#ubicacion"
+               class="footer-enlace-texto">
+                Ver ubicación de la tienda →
+            </a>
+
+            <h3 class="footer-titulo-explorar">Explora AMORE</h3>
+
+            <nav class="footer-navegacion" aria-label="Navegación del pie de página">
+                <a href="index.html">Inicio</a>
+                <a href="accesorios.html">Accesorios</a>
+                <a href="regalos.html">Regalos</a>
+                <a href="sobre-nosotros.html">Sobre nosotros</a>
+            </nav>
+        </div>
+
+    </div>
+
+    <!-- MENSAJE INFERIOR -->
+    <div class="footer-frase">
+        <span class="footer-corazon">♡</span>
+        <p>Un detalle puede hacer especial cualquier momento.</p>
+        <span class="footer-corazon">♡</span>
+    </div>
+
+    <!-- DERECHOS RESERVADOS -->
+    <div class="footer-inferior">
+        <p>
+            © 2026 <strong>Tienda AMORE</strong>.
+            Todos los derechos reservados.
+        </p>
+    </div>
+
+</footer>
+
+    <script src="regalos.js"></script>
+</body>
+</html>

@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <script>
+(function () {
+    try {
+        const tema = localStorage.getItem("modoAMORE");
+        const raiz = document.documentElement;
+
+        raiz.classList.add("tema-preparando");
+
+        if (tema === "oscuro") {
+            raiz.classList.add("modo-oscuro");
+        } else {
+            raiz.classList.remove("modo-oscuro");
+        }
+    } catch (e) {}
+})();
+</script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AMORE | Inicio</title>
+    
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>❤️</text></svg>">
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+<body>
+    <button
+    id="volverArriba"
+    class="boton-volver-arriba"
+    type="button"
+    aria-label="Volver arriba"
+    title="Volver arriba"
+>
+    ↑
+    </button>
+    <!-- =========================
+         CABECERA / HEADER
+    ========================== -->
+    <header>
+        <!-- LOGO DE LA TIENDA -->
+        <!-- Cambia "logo-amore.png" por tu imagen -->
+        <div class="logo">
+            <img src="LOGO.jpeg" alt="Logo de AMORE">
+        </div>
+        <!-- NOMBRE DE LA TIENDA -->
+        <div class="nombre-tienda">
+            AMORE
+        </div>
+        <!-- MENÚ DE NAVEGACIÓN -->
+        <nav>
+            <a href="index.html">
+                Inicio
+            </a>
+            <a href="accesorios.html">
+                Accesorios
+            </a>
+            <a href="regalos.html">
+                Regalos
+            </a>
+            <a href="sobre-nosotros.html">
+                Sobre nosotros
+            </a>
+            <!-- BOTÓN MODO CLARO / OSCURO -->
+            <!-- Su funcionamiento lo agregaremos después con JavaScript -->
+            <button id="modoOscuro">
+                ☾ Oscuro
+            </button>
+        </nav>
+    </header>
+    <!-- =========================
+         CUERPO / BODY
+    ========================== -->
+
+<main class="inicio-amore">
+
+    <!-- PRESENTACIÓN PRINCIPAL DE LA TIENDA -->
+    <section class="inicio-presentacion">
+        <div class="inicio-imagen-marco">
+            <div class="inicio-etiqueta-imagen">♡ DETALLES CON AMOR</div>
+
+            <img
+                src="tienda.jpg"
+                alt="Productos y detalles de la tienda AMORE"
+                class="inicio-imagen-tienda"
+            >
+
+            <div class="inicio-sello-imagen">
+                <span>AMORE</span>
+                <small>Detalles para ti</small>
+            </div>
+        </div>
+
+        <div class="inicio-descripcion">
+            <span class="inicio-mini-titulo">UN LUGAR PARA SORPRENDER</span>
+
+            <h1>Bienvenidos a <span>AMORE</span></h1>
+
+            <div class="inicio-linea-decorativa"></div>
+
+            <p>
+                En AMORE encontrarás una variedad de productos pensados
+                para acompañar y hacer especiales tus momentos importantes.
+                Ofrecemos flores, regalos para diferentes fechas y ocasiones,
+                accesorios y otros detalles que puedes elegir según tus gustos
+                o los de esa persona especial. Contamos con opciones para
+                cumpleaños, aniversarios, celebraciones, fechas especiales y
+                diferentes momentos en los que quieras sorprender a alguien.
+                En AMORE buscamos reunir distintas alternativas en un solo
+                lugar, brindándote productos que combinan detalle y creatividad
+                para que puedas encontrar fácilmente el regalo adecuado.
+                Nuestro propósito es ayudarte a expresar tus sentimientos y
+                hacer que cada ocasión sea aún más especial mediante un detalle
+                significativo.
+            </p>
+
+            <a href="accesorios.html" class="inicio-boton">
+                Explorar nuestros productos
+                <span aria-hidden="true">↗</span>
+            </a>
+        </div>
+    </section>
+
+    <!-- MENSAJE DE BIENVENIDA -->
+    <section class="inicio-bienvenida">
+        <div class="bienvenida-adorno bienvenida-adorno-uno" aria-hidden="true">✧</div>
+        <div class="bienvenida-adorno bienvenida-adorno-dos" aria-hidden="true">♡</div>
+
+        <span class="inicio-mini-titulo">UN DETALLE PUEDE DECIR MUCHO</span>
+
+        <h2>Momentos especiales, recuerdos inolvidables</h2>
+
+        <p>
+            A veces, un pequeño detalle expresa lo que las palabras no pueden.
+            Descubre opciones para sorprender, agradecer y compartir momentos
+            llenos de significado.
+        </p>
+
+        <div class="bienvenida-firma">Con cariño, AMORE <span>♡</span></div>
+    </section>
+
+    <!-- CARRUSEL AUTOMÁTICO -->
+    <section class="inicio-seccion-carrusel" id="destacados">
+        <div class="inicio-titulo-seccion">
+            <span class="inicio-mini-titulo">DESCUBRE AMORE</span>
+            <h2>Encuentra algo especial</h2>
+            <p>Explora nuestras diferentes opciones y conoce más de la tienda.</p>
+        </div>
+
+        <div class="inicio-carrusel" id="carruselAmore" aria-roledescription="carrusel">
+
+            <!-- DIAPOSITIVA 1 -->
+            <article class="inicio-diapositiva activa"
+                     aria-roledescription="diapositiva"
+                     aria-label="1 de 3">
+                <div class="diapositiva-imagen">
+                    <img
+                        src="carusel1.jpg"
+                        alt="Accesorios disponibles en AMORE"
+                        loading="lazy"
+                    >
+                </div>
+
+                <div class="diapositiva-contenido">
+                    <span class="diapositiva-numero">01 / 03</span>
+                    <span class="inicio-mini-titulo">DETALLES PARA TU ESTILO</span>
+                    <h3>Accesorios</h3>
+                    <p>
+                        Descubre accesorios para complementar tu estilo
+                        o elegir un detalle especial para alguien importante.
+                    </p>
+                    <a href="accesorios.html" class="inicio-boton">
+                        Ver accesorios <span aria-hidden="true">↗</span>
+                    </a>
+                </div>
+            </article>
+
+            <!-- DIAPOSITIVA 2 -->
+            <article class="inicio-diapositiva"
+                     aria-roledescription="diapositiva"
+                     aria-label="2 de 3"
+                     aria-hidden="true">
+                <div class="diapositiva-imagen">
+                    <img
+                        src="carusel2.jpg"
+                        alt="Regalos para ocasiones especiales"
+                        loading="lazy"
+                    >
+                </div>
+
+                <div class="diapositiva-contenido">
+                    <span class="diapositiva-numero">02 / 03</span>
+                    <span class="inicio-mini-titulo">SORPRENDE A ALGUIEN</span>
+                    <h3>Regalos</h3>
+                    <p>
+                        Encuentra ideas para cumpleaños, aniversarios,
+                        celebraciones y otros momentos que merecen recordarse.
+                    </p>
+                    <a href="regalos.html" class="inicio-boton">
+                        Ver regalos <span aria-hidden="true">↗</span>
+                    </a>
+                </div>
+            </article>
+
+            <!-- DIAPOSITIVA 3 -->
+            <article class="inicio-diapositiva"
+                     aria-roledescription="diapositiva"
+                     aria-label="3 de 3"
+                     aria-hidden="true">
+                <div class="diapositiva-imagen">
+                    <img
+                        src="carusel3.jpeg"
+                        alt="Conoce la tienda AMORE"
+                        loading="lazy"
+                    >
+                </div>
+
+                <div class="diapositiva-contenido">
+                    <span class="diapositiva-numero">03 / 03</span>
+                    <span class="inicio-mini-titulo">CONOCE NUESTRA ESENCIA</span>
+                    <h3>Conoce AMORE</h3>
+                    <p>
+                        Descubre quiénes somos, qué ofrecemos y dónde puedes
+                        encontrarnos en la ciudad de Oruro.
+                    </p>
+                    <a href="sobre-nosotros.html" class="inicio-boton">
+                        Sobre nosotros <span aria-hidden="true">↗</span>
+                    </a>
+                </div>
+            </article>
+
+            <!-- CONTROLES DEL CARRUSEL -->
+            <button
+                class="carrusel-flecha carrusel-anterior"
+                type="button"
+                aria-label="Diapositiva anterior"
+            >‹</button>
+
+            <button
+                class="carrusel-flecha carrusel-siguiente"
+                type="button"
+                aria-label="Siguiente diapositiva"
+            >›</button>
+        </div>
+
+        <div class="carrusel-pie">
+            <div class="carrusel-puntos" aria-label="Elegir diapositiva">
+                <button class="carrusel-punto activo" type="button"
+                        aria-label="Mostrar accesorios"
+                        aria-current="true"></button>
+                <button class="carrusel-punto" type="button"
+                        aria-label="Mostrar regalos"
+                        aria-current="false"></button>
+                <button class="carrusel-punto" type="button"
+                        aria-label="Mostrar información de AMORE"
+                        aria-current="false"></button>
+            </div>
+
+            <button
+                id="pausarCarrusel"
+                class="carrusel-pausa"
+                type="button"
+                aria-pressed="false"
+            >Ⅱ Pausar</button>
+        </div>
+    </section>
+
+    <!-- BANNER FINAL -->
+    <section class="inicio-banner-final">
+        <div class="banner-destello banner-destello-uno" aria-hidden="true">✧</div>
+        <div class="banner-destello banner-destello-dos" aria-hidden="true">♡</div>
+
+        <span class="banner-icono" aria-hidden="true">♡</span>
+
+        <div class="banner-texto">
+            <span class="inicio-mini-titulo">CADA OCASIÓN MERECE ALGO ESPECIAL</span>
+            <h2>En AMORE encontrarás detalles para cada momento.</h2>
+            <p>
+                Explora nuestras opciones y encuentra ese detalle
+                que quieres compartir con alguien especial.
+            </p>
+        </div>
+<br>
+        <a href="regalos.html" class="inicio-boton banner-boton">
+            Descubrir regalos <span aria-hidden="true">↗</span>
+        </a>
+    </section>
+
+</main>
+
+    <!-- =========================
+         PIE DE PÁGINA / FOOTER
+    ========================== -->
+<footer class="footer-amore">
+
+    <div class="footer-contenido">
+
+        <!-- INFORMACIÓN DE AMORE -->
+        <div class="footer-columna footer-tienda">
+            <h2 class="footer-logo">AMORE</h2>
+            <span class="footer-subtitulo">Detalles para cada momento</span>
+
+            <p>
+                En AMORE encontrarás flores, regalos para fechas especiales,
+                accesorios y detalles para sorprender a las personas que quieres.
+            </p>
+
+            <a href="sobre-nosotros.html" class="footer-enlace-texto">
+                Conoce nuestra tienda →
+            </a>
+        </div>
+
+        <!-- REDES SOCIALES -->
+        <div class="footer-columna footer-redes">
+            <h3>Síguenos</h3>
+
+            <p>
+                Descubre nuestros productos y conoce nuestras novedades
+                a través de nuestras redes sociales.
+            </p>
+
+            <div class="footer-enlaces">
+                <a href="https://www.facebook.com/share/1EnmWUCuBG/"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   aria-label="Facebook de AMORE"
+                   title="Facebook">
+                    <i class="fa-brands fa-facebook-f"></i>
+                </a>
+
+                <a href="https://www.tiktok.com/@accesoriosyregalosamore?_r=1&_t=ZS-99nA0Rarass"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   aria-label="TikTok de AMORE"
+                   title="TikTok">
+                    <i class="fa-brands fa-tiktok"></i>
+                </a>
+
+                <a href="https://wa.me/59167249175?text=Hola%20AMORE,%20quisiera%20consultar%20sobre%20un%20producto."
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   aria-label="WhatsApp de AMORE"
+                   title="WhatsApp">
+                    <i class="fa-brands fa-whatsapp"></i>
+                </a>
+            </div>
+        </div>
+
+        <!-- HORARIO DE ATENCIÓN -->
+        <div class="footer-columna footer-horario">
+            <h3>Horario de atención</h3>
+
+            <div class="footer-horario-linea">
+                <i class="fa-regular fa-clock"></i>
+                <div>
+                    <strong>Lunes a sábado</strong>
+                    <p>9:00 a. m. – 10:00 p. m.</p>
+                </div>
+            </div>
+
+            <p class="footer-nota">
+                Estamos para ayudarte a encontrar un detalle especial.
+            </p>
+        </div>
+
+        <!-- UBICACIÓN Y NAVEGACIÓN -->
+        <div class="footer-columna footer-ubicacion">
+            <h3>Encuéntranos</h3>
+
+            <div class="footer-ubicacion-linea">
+                <i class="fa-solid fa-location-dot"></i>
+                <p>Oruro, Bolivia</p>
+            </div>
+
+            <a href="sobre-nosotros.html#ubicacion"
+               class="footer-enlace-texto">
+                Ver ubicación de la tienda →
+            </a>
+
+            <h3 class="footer-titulo-explorar">Explora AMORE</h3>
+
+            <nav class="footer-navegacion" aria-label="Navegación del pie de página">
+                <a href="index.html">Inicio</a>
+                <a href="accesorios.html">Accesorios</a>
+                <a href="regalos.html">Regalos</a>
+                <a href="sobre-nosotros.html">Sobre nosotros</a>
+            </nav>
+        </div>
+
+    </div>
+
+    <!-- MENSAJE INFERIOR -->
+    <div class="footer-frase">
+        <span class="footer-corazon">♡</span>
+        <p>Un detalle puede hacer especial cualquier momento.</p>
+        <span class="footer-corazon">♡</span>
+    </div>
+
+    <!-- DERECHOS RESERVADOS -->
+    <div class="footer-inferior">
+        <p>
+            © 2026 <strong>Tienda AMORE</strong>.
+            Todos los derechos reservados.
+        </p>
+    </div>
+
+</footer>
+
+    <!-- JAVASCRIPT
+         Lo agregaremos después -->
+    <script src="index.js"></script>
+</body>
+</html>

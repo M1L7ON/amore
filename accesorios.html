@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    
+<script>
+(function () {
+    try {
+        const tema = localStorage.getItem("modoAMORE");
+        const raiz = document.documentElement;
+
+        raiz.classList.add("tema-preparando");
+
+        if (tema === "oscuro") {
+            raiz.classList.add("modo-oscuro");
+        } else {
+            raiz.classList.remove("modo-oscuro");
+        }
+    } catch (e) {}
+})();
+</script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AMORE | Accesorios</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>❤️</text></svg>">
+    <link rel="stylesheet" href="accesorios.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+<body>
+    <button
+    id="volverArriba"
+    class="boton-volver-arriba"
+    type="button"
+    aria-label="Volver arriba"
+    title="Volver arriba"
+>
+    ↑
+</button>
+    <!-- =========================
+         HEADER / CABECERA
+    ========================== -->
+    <header>
+        <!-- LOGO -->
+        <!-- Cambia el nombre de la imagen por tu logo -->
+        <div class="logo">
+            <img src="LOGO.jpeg" alt="Logo de AMORE">
+        </div>
+        <!-- NOMBRE DE LA TIENDA -->
+        <div class="nombre-tienda">
+            AMORE
+        </div>
+        <!-- MENÚ DE NAVEGACIÓN -->
+        <nav>
+            <a href="index.html">
+                Inicio
+            </a>
+            <a href="accesorios.html">
+                Accesorios
+            </a>
+            <a href="regalos.html">
+                Regalos
+            </a>
+            <a href="sobre-nosotros.html">
+                Sobre nosotros
+            </a>
+            <!-- MODO CLARO / OSCURO -->
+            <button id="modoOscuro">
+                ☾ Oscuro
+            </button>
+        </nav>
+    </header>
+    <!-- =========================
+         CUERPO DE LA PÁGINA
+    ========================== -->
+    <main>
+        <!-- TÍTULO + BUSCADOR -->
+        <section class="encabezado-productos">
+            <h1>
+                ACCESORIOS
+            </h1>
+            <!--
+                BUSCADOR
+                Por ahora solamente es la estructura.
+                Más adelante podemos agregarle JavaScript
+                para buscar productos.
+            -->
+            
+<div class="buscador">
+    <input type="text" id="buscarProducto" placeholder="Buscar productos...">
+</div>
+
+<div id="mensajeBusqueda" class="mensaje-sin-resultados">
+    <div class="icono-sin-resultados">♡</div>
+    <h2>No encontramos ese producto</h2>
+    <p>Intenta buscar con otro nombre o palabra.</p>
+</div>
+        </section>
+        <!-- =========================
+             PRODUCTOS
+        ========================== -->
+        <section class="productos">
+            <!-- PRODUCTO 1 -->
+            <article class="tarjeta-producto">
+                <h2>
+                    GOGO DE TELA
+                </h2>
+                <div class="imagen-producto">
+                    <!-- Cambia esta imagen -->
+                    <img
+                        src="acce2.jpeg"
+                        alt="Accesorio 1"
+                    >
+                </div>
+                <p>
+                    Perfecto para que no te jale el cabello.
+                </p>
+                <span class="precio">
+                    Bs. 10,00
+                </span>
+            </article>
+            <!-- PRODUCTO 2 -->
+            <article class="tarjeta-producto">
+                <h2>
+                    TRABAS
+                </h2>
+                <div class="imagen-producto">
+                    <img
+                        src="acce3.jpeg"
+                        alt="Accesorio 2"
+                    >
+                </div>
+                <p>
+                    Prácticas y bonitas, ideales para sujetar tu cabello y complementar tu estilo.
+                </p>
+                <span class="precio">
+                    Bs. 10,00
+                </span>
+            </article>
+            <!-- PRODUCTO 3 -->
+            <article class="tarjeta-producto">
+                <h2>LIGAS</h2>
+                <div class="imagen-producto">
+                    <img src="acce4.jpeg" alt="Accesorio 3">
+                </div>
+                <p>Dale un toque delicado y elegante a tus peinados con nuestras ligas.</p>
+                <span class="precio">Bs. 10,00</span>
+            </article>
+            <!-- PRODUCTO 4 -->
+            <article class="tarjeta-producto">
+                <h2>VASELINAS DE COLORES</h2>
+                <div class="imagen-producto">
+                    <img src="acce5.jpeg" alt="Accesorio 4">
+                </div>
+                <p>Hidratan tus labios y les dan un toque de color y brillo.</p>
+                <span class="precio">Bs. 8,00</span>
+            </article>
+            <!-- PRODUCTO 5 -->
+            <article class="tarjeta-producto">
+                <h2>GOGOS DE COLORES🌈</h2>
+                <div class="imagen-producto">
+                    <img src="acce6.jpeg" alt="Accesorio 5">
+                </div>
+                <p>Divertidos y coloridos, ideales para complementar tu estilo y darle un toque único a tus accesorios.</p>
+                <span class="precio">Bs. 15,00</span>
+            </article>
+            <!-- PRODUCTO 6 -->
+            <article class="tarjeta-producto">
+                <h2>ANILLOS CON DISEÑOS</h2>
+                <div class="imagen-producto">
+                    <img src="acce7.jpeg" alt="Accesorio 6">
+                </div>
+                <p>Delicados y elegantes, perfectos para complementar tu estilo y lucir hermosa en cada ocasión.</p>
+                <span class="precio">Bs. 15,00</span>
+            </article>
+            <!-- PRODUCTO 7 -->
+            <article class="tarjeta-producto">
+                <h2>ARETES</h2>
+                <div class="imagen-producto">
+                    <img src="acce8.jpeg" alt="Accesorio 7">
+                </div>
+                <p>Diseños delicados y modernos que complementan cualquier estilo.</p>
+                <span class="precio">Bs. 10,00</span>
+            </article>
+            <!-- PRODUCTO 8 -->
+            <article class="tarjeta-producto">
+                <h2>MANILLAS CON INICIALES</h2>
+                <div class="imagen-producto">
+                    <img src="acce9.jpeg" alt="Accesorio 8">
+                </div>
+                <p>Personaliza tu estilo con manillas que llevan una inicial especial.</p>
+                <span class="precio">Bs. 20,00</span>
+            </article>
+            <!-- PRODUCTO 9 -->
+            <article class="tarjeta-producto">
+                <h2>MANILLAS CON FIGURAS</h2>
+                <div class="imagen-producto">
+                    <img src="acce10.jpeg" alt="Accesorio 9">
+                </div>
+                <p>Diseños coloridos y originales para destacar en cada ocasión.</p>
+                <span class="precio">Bs. 15,00</span>
+            </article>
+            <!-- PRODUCTO 10 -->
+            <article class="tarjeta-producto">
+                <h2>ANILLOS CON FIGURAS</h2>
+                <div class="imagen-producto">
+                    <img src="acce11.jpeg" alt="Accesorio 10">
+                </div>
+                <p>Anillos con diseños únicos de corazones, flores, estrellas y más.</p>
+                <span class="precio">Bs. 18,00</span>
+            </article>
+            <!-- PRODUCTO 11 -->
+            <article class="tarjeta-producto">
+                <h2>ANILLOS CON DIAMANTES</h2>
+                <div class="imagen-producto">
+                    <img src="acce12.jpeg" alt="Accesorio 11">
+                </div>
+                <p>Elegantes y brillantes, perfectos para darle un toque especial a tus manos.</p>
+                <span class="precio">Bs. 20,00</span>
+            </article>
+            <!-- PRODUCTO 12 -->
+            <article class="tarjeta-producto">
+                <h2>PINZAS PARA EL CABELLO</h2>
+                <div class="imagen-producto">
+                    <img src="acce13.jpeg" alt="Accesorio 12">
+                </div>
+                <p>Ideales para recoger tu cabello y crear moños cómodos y bonitos.</p>
+                <span class="precio">Bs. 12,00</span>
+            </article>
+            <!-- PRODUCTO 13 -->
+            <article class="tarjeta-producto">
+                <h2>ARETES MODERNOS</h2>
+                <div class="imagen-producto">
+                    <img src="acce14.jpeg" alt="Accesorio 13">
+                </div>
+                <p>Accesorios sofisticados que realzan tu estilo con delicadeza.</p>
+                <span class="precio">Bs. 20,00</span>
+            </article>
+            <!-- PRODUCTO 14 -->
+            <article class="tarjeta-producto">
+                <h2>BILLETERA</h2>
+                <div class="imagen-producto">
+                    <img src="acce15.jpeg" alt="Accesorio 14">
+                </div>
+                <p>Práctica y elegante, ideal para guardar tu dinero y tarjetas.</p>
+                <span class="precio">Bs. 35,00</span>
+            </article>
+            <!-- PRODUCTO 15 -->
+            <article class="tarjeta-producto">
+                <h2>PINZAS DECORATIVAS</h2>
+                <div class="imagen-producto">
+                    <img src="acce16.jpeg" alt="Accesorio 15">
+                </div>
+                <p>Sujetan tu cabello mientras añaden un toque de elegancia y estilo.</p>
+                <span class="precio">Bs. 16,00</span>
+            </article>
+            <!-- PRODUCTO 16 -->
+            <article class="tarjeta-producto">
+                <h2>MOÑOS CON LISTONES</h2>
+                <div class="imagen-producto">
+                    <img src="acce17.jpeg" alt="Accesorio 16">
+                </div>
+                <p> Ideales para recoger tu cabello y crear moños cómodos y bonitos. </p>
+                <span class="precio">Bs. 15,00</span>
+            </article>
+            <!-- PRODUCTO 17 -->
+            <article class="tarjeta-producto">
+                <h2>ARETES PARA NIÑAS</h2>
+                <div class="imagen-producto">
+                    <img src="acce18.jpeg" alt="Accesorio 17">
+                </div>
+                <p>Práctica y elegante, ideal para guardar tu dinero y tarjetas.</p>
+                <span class="precio">Bs. 15,00</span>
+            </article>
+            <!-- PRODUCTO 18 -->
+            <article class="tarjeta-producto">
+                <h2>MONEDEROS</h2>
+                <div class="imagen-producto">
+                    <img src="acce19.jpeg" alt="Accesorio 18">
+                </div>
+                <p>Pequeña y perfecta para llevar a todas partes.</p>
+                <span class="precio">Bs. 30,00</span>
+            </article>
+            <!-- PRODUCTO 19 -->
+            <article class="tarjeta-producto">
+                <h2>BILLETERA COMPACTA</h2>
+                <div class="imagen-producto">
+                    <img src="acce20.jpeg" alt="Accesorio 19">
+                </div>
+                <p> Pequeña, práctica y perfecta para llevar lo esencial a todas partes.</p>
+                <span class="precio">Bs. 40,00</span>
+            </article>
+            <!-- PRODUCTO 20 -->
+            <article class="tarjeta-producto">
+                <h2>CARTERA</h2>
+                <div class="imagen-producto">
+                    <img src="acce21.jpeg" alt="Accesorio 20">
+                </div>
+                <p>Práctica para llevar todo lo que quieras a donde quieras.</p>
+                <span class="precio">Bs. 90,00</span>
+            </article>
+            <!-- PRODUCTO 21 -->
+            <article class="tarjeta-producto">
+                <h2>ESPEJO DE BOLSILLO</h2>
+                <div class="imagen-producto">
+                    <img src="acce22.jpeg" alt="Accesorio 21">
+                </div>
+                <p>Pequeño y práctico, perfecto para retocar tu apariencia donde estés</p>
+                <span class="precio">Bs. 25,00</span>
+            </article>
+            <!-- PRODUCTO 22 -->
+            <article class="tarjeta-producto">
+                <h2>PEINE CON ESPEJO</h2>
+                <div class="imagen-producto">
+                    <img src="acce23.jpeg" alt="Accesorio 22">
+                </div>
+                <p>Incluye un espejo normal y otro de aumento para observar cada detalle. </p>
+                <span class="precio">Bs. 25,00</span>
+            </article>
+            <!-- PRODUCTO 23 -->
+            <article class="tarjeta-producto">
+                <h2>ESPEJO DOBLE</h2>
+                <div class="imagen-producto">
+                    <img src="acce24.jpeg" alt="Accesorio 23">
+                </div>
+                <p>La combinación perfecta para peinarte y revisar tu look en cualquier momento.</p>
+                <span class="precio">Bs. 20,00</span>
+            </article>
+            <!-- PRODUCTO 24 -->
+            <article class="tarjeta-producto">
+                <h2>CARTERA DE MANO</h2>
+                <div class="imagen-producto">
+                    <img src="acce25.jpeg" alt="Accesorio 24">
+                </div>
+                <p>Elegante y versátil, ideal para complementar tus atuendos en cualquier ocasión.</p>
+                <span class="precio">Bs. 130,00</span>
+            </article>
+            <!-- PRODUCTO 25 -->
+            <article class="tarjeta-producto">
+                <h2>NECESER DE MAQUILLAJE</h2>
+                <div class="imagen-producto">
+                    <img src="acce26.jpeg" alt="Accesorio 25">
+                </div>
+                <p>Perfecto para organizar y transportar tus cosméticos y productos de belleza.</p>
+                <span class="precio">Bs. 45,00</span>
+            </article>
+            <!-- PRODUCTO 26 -->
+            <article class="tarjeta-producto">
+                <h2>GORRO PARA EL CABELLO</h2>
+                <div class="imagen-producto">
+                    <img src="acce27.jpeg" alt="Accesorio 26">
+                </div>
+                <p>Ayuda a reducir la fricción durante el descanso y a mantener tu cabello más cuidado.</p>
+                <span class="precio">Bs. 35,00</span>
+            </article>
+            <!-- PRODUCTO 27 -->
+            <article class="tarjeta-producto">
+                <h2>ALMOHADA DE VIAJE</h2>
+                <div class="imagen-producto">
+                    <img src="acce28.jpeg" alt="Accesorio 27">
+                </div>
+                <p>Brinda comodidad y apoyo al cuello durante tus viajes y momentos de descanso.</p>
+                <span class="precio">Bs. 76,00</span>
+            </article>
+            <!-- PRODUCTO 28 -->
+            <article class="tarjeta-producto">
+                <h2>COMBO DE CUIDADO PERSONAL</h2>
+                <div class="imagen-producto">
+                    <img src="acce30.jpeg" alt="Accesorio 28">
+                </div>
+                <p>Un práctico conjunto para organizar y llevar tus cremas, geles y otros productos personales. </p>
+                <span class="precio">Bs. 50,00</span>
+            </article>
+            <!-- PRODUCTO 29 -->
+            <article class="tarjeta-producto">
+                <h2>ANTIFAZ PARA DORMIR</h2>
+                <div class="imagen-producto">
+                    <img src="acce31.jpeg" alt="Accesorio 29">
+                </div>
+                <p>Suave y cómodo, ideal para descansar con mayor comodidad y reducir la entrada de luz.</p>
+                <span class="precio">Bs. 30,00</span>
+            </article>
+            <!-- PRODUCTO 30 -->
+            <article class="tarjeta-producto">
+                <h2>PORTA TOALLAS HIGIENICAS</h2>
+                <div class="imagen-producto">
+                    <img src="acce32.jpeg" alt="Accesorio 30">
+                </div>
+                <p>Práctico y discreto, ideal para guardar y transportar tus toallas higiénicas con comodidad.</p>
+                <span class="precio">Bs. 20,00</span>
+            </article>
+        </section>
+    </main>
+    <!-- =========================
+         PIE DE PÁGINA / FOOTER
+    ========================== -->
+<footer class="footer-amore">
+
+    <div class="footer-contenido">
+
+        <!-- INFORMACIÓN DE AMORE -->
+        <div class="footer-columna footer-tienda">
+            <h2 class="footer-logo">AMORE</h2>
+            <span class="footer-subtitulo">Detalles para cada momento</span>
+
+            <p>
+                En AMORE encontrarás flores, regalos para fechas especiales,
+                accesorios y detalles para sorprender a las personas que quieres.
+            </p>
+
+            <a href="sobre-nosotros.html" class="footer-enlace-texto">
+                Conoce nuestra tienda →
+            </a>
+        </div>
+
+        <!-- REDES SOCIALES -->
+        <div class="footer-columna footer-redes">
+            <h3>Síguenos</h3>
+
+            <p>
+                Descubre nuestros productos y conoce nuestras novedades
+                a través de nuestras redes sociales.
+            </p>
+
+            <div class="footer-enlaces">
+                <a href="https://www.facebook.com/share/1EnmWUCuBG/"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   aria-label="Facebook de AMORE"
+                   title="Facebook">
+                    <i class="fa-brands fa-facebook-f"></i>
+                </a>
+
+                <a href="https://www.tiktok.com/@accesoriosyregalosamore?_r=1&_t=ZS-99nA0Rarass"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   aria-label="TikTok de AMORE"
+                   title="TikTok">
+                    <i class="fa-brands fa-tiktok"></i>
+                </a>
+
+                <a href="https://wa.me/59167249175?text=Hola%20AMORE,%20quisiera%20consultar%20sobre%20un%20producto."
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   aria-label="WhatsApp de AMORE"
+                   title="WhatsApp">
+                    <i class="fa-brands fa-whatsapp"></i>
+                </a>
+            </div>
+        </div>
+
+        <!-- HORARIO DE ATENCIÓN -->
+        <div class="footer-columna footer-horario">
+            <h3>Horario de atención</h3>
+
+            <div class="footer-horario-linea">
+                <i class="fa-regular fa-clock"></i>
+                <div>
+                    <strong>Lunes a sábado</strong>
+                    <p>9:00 a. m. – 10:00 p. m.</p>
+                </div>
+            </div>
+
+            <p class="footer-nota">
+                Estamos para ayudarte a encontrar un detalle especial.
+            </p>
+        </div>
+
+        <!-- UBICACIÓN Y NAVEGACIÓN -->
+        <div class="footer-columna footer-ubicacion">
+            <h3>Encuéntranos</h3>
+
+            <div class="footer-ubicacion-linea">
+                <i class="fa-solid fa-location-dot"></i>
+                <p>Oruro, Bolivia</p>
+            </div>
+
+            <a href="sobre-nosotros.html#ubicacion"
+               class="footer-enlace-texto">
+                Ver ubicación de la tienda →
+            </a>
+
+            <h3 class="footer-titulo-explorar">Explora AMORE</h3>
+
+            <nav class="footer-navegacion" aria-label="Navegación del pie de página">
+                <a href="index.html">Inicio</a>
+                <a href="accesorios.html">Accesorios</a>
+                <a href="regalos.html">Regalos</a>
+                <a href="sobre-nosotros.html">Sobre nosotros</a>
+            </nav>
+        </div>
+
+    </div>
+
+    <!-- MENSAJE INFERIOR -->
+    <div class="footer-frase">
+        <span class="footer-corazon">♡</span>
+        <p>Un detalle puede hacer especial cualquier momento.</p>
+        <span class="footer-corazon">♡</span>
+    </div>
+
+    <!-- DERECHOS RESERVADOS -->
+    <div class="footer-inferior">
+        <p>
+            © 2026 <strong>Tienda AMORE</strong>.
+            Todos los derechos reservados.
+        </p>
+    </div>
+
+</footer>
+
+    <!-- JAVASCRIPT -->
+    <script src="accesorios.js"></script>
+</body>
+</html>
